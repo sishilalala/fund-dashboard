@@ -142,7 +142,20 @@
 
   </main>
 
-  <script src="./data.js"></script>
+  <script src="./data-market.js"></script>
+  <script src="./data-top-funds.js"></script>
+  <script src="./data-cat1.js"></script>
+  <script src="./data-cat2.js"></script>
+  <script src="./data-meta.js"></script>
+  <script>
+    // Merge chunked data into single FUND_DATA object
+    const FUND_DATA = {
+      ...FUND_DATA_MARKET,
+      ...FUND_DATA_TOP,
+      category_funds: { ...FUND_DATA_CAT1, ...FUND_DATA_CAT2 },
+      ...FUND_DATA_META
+    };
+  </script>
   <script src="./app.js"></script>
 </body>
 </html>
