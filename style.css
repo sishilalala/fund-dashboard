@@ -1,4 +1,4 @@
-/* style.css — Finance Dashboard Design System */
+/* style.css \u2014 Finance Dashboard Design System */
 
 /* ============================================
    FONTS
@@ -9,7 +9,7 @@
 }
 
 /* ============================================
-   TYPE SCALE — Fluid with clamp()
+   TYPE SCALE \u2014 Fluid with clamp()
    ============================================ */
 :root {
   --text-xs:   clamp(0.6875rem, 0.65rem + 0.2vw, 0.75rem);
