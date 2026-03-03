@@ -336,11 +336,11 @@
   // ---- News Section ----
   const categoryIcons = {
     '\u76d1\u7ba1\u653f\u7b56': '\u2696\ufe0f',
-    '\u5e02\u573a\u52a8\u6001': '\u1f4c8',
-    '\u57fa\u91d1\u53d1\u884c': '\u1f195',
-    '\u884c\u4e1a\u5206\u6790': '\u1f50d',
-    '\u4eba\u4e8b\u53d8\u52a8': '\u1f464',
-    '\u56fd\u9645\u89c6\u89d2': '\u1f30f'
+    '\u5e02\u573a\u52a8\u6001': '\ud83d\udcc8',
+    '\u57fa\u91d1\u53d1\u884c': '\ud83c\udd95',
+    '\u884c\u4e1a\u5206\u6790': '\ud83d\udd0d',
+    '\u4eba\u4e8b\u53d8\u52a8': '\ud83d\udc64',
+    '\u56fd\u9645\u89c6\u89d2': '\ud83c\udf0f'
   };
 
   let currentNewsFilter = 'all';
@@ -359,7 +359,7 @@
     }
 
     list.innerHTML = filtered.map(item => {
-      const icon = categoryIcons[item.category] || '\u1f4f0';
+      const icon = categoryIcons[item.category] || '\ud83d\udcf0';
       return `
         <a class="news-item" href="${item.url}" target="_blank" rel="noopener">
           <div class="news-item-top">
