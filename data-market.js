@@ -1,1 +1,539 @@
-const FUND_DATA_MARKET = {"indices":[{"code":"000001","name":"\u4e0a\u8bc1\u6307\u6570","price":4182.59,"change_pct":0.47,"change_amt":19.71,"volume":1345892469395.2,"high":4188.77,"low":4131.37,"open":4151.8,"prev_close":4162.88,"amplitude":1.38},{"code":"399001","name":"\u6df7\u8bc1\u6210\u6307","price":14465.79,"change_pct":-0.2,"change_amt":-29.3,"volume":1674826283498.0332,"high":14509.69,"low":14285.67,"open":14327.65,"prev_close":14495.09,"amplitude":1.55},{"code":"399006","name":"\u521b\u4e1a\u677f\u6307","price":3294.16,"change_pct":-0.49,"change_amt":-16.14,"volume":743719423714.45,"high":3319.91,"low":3257.05,"open":3257.05,"prev_close":3310.3,"amplitude":1.9},{"code":"000300","name":"\u6caa\u6df1300","price":4728.67,"change_pct":0.38,"change_amt":18.02,"volume":752681937770.4,"high":4735.41,"low":4667.28,"open":4681.01,"prev_close":4710.65,"amplitude":1.45},{"code":"000688","name":"\u79d1\u521b50","price":1464.77,"change_pct":-1.56,"change_amt":-23.25,"volume":79348051009.0,"high":1486.55,"low":1459.51,"open":1459.78,"prev_close":1488.02,"amplitude":1.82},{"code":"000016","name":"\u4e0a\u8bc150","price":3046.47,"change_pct":0.23,"change_amt":7.04,"volume":193821718736.0,"high":3050.92,"low":3010.05,"open":3031.45,"prev_close":3039.43,"amplitude":1.34},{"code":"899050","name":"\u5317\u8bc150","price":1475.73,"change_pct":-3.99,"change_amt":-61.4,"volume":25503289586.0,"high":1507.69,"low":1468.27,"open":1506.68,"prev_close":1537.13,"amplitude":2.56}],"industry_boards":[{"name":"\u77f3\u6cb9\u884c\u4e1a","stock_count":24,"change_pct":12.78,"volume":4123769541,"amount":36164726768,"leader_name":"\u65b0\u9526\u52a8\u529b","leader_change_pct":20.03},{"name":"\u6709\u8272\u91d1\u5c5e","stock_count":72,"change_pct":3.51,"volume":8592396228,"amount":208985159154,"leader_name":"\u91d1\u745e\u77ff\u4e1a","leader_change_pct":10.02},{"name":"\u98de\u673a\u5236\u9020","stock_count":14,"change_pct":3.35,"volume":1054817883,"amount":40737407069,"leader_name":"\u4e2d\u56fd\u536b\u661f","leader_change_pct":9.26},{"name":"\u7164\u70ad\u884c\u4e1a","stock_count":41,"change_pct":2.82,"volume":6735894834,"amount":41840121294,"leader_name":"\u91d1\u745e\u77ff\u4e1a","leader_change_pct":10.02},{"name":"\u9676\u74f7\u884c\u4e1a","stock_count":8,"change_pct":2.76,"volume":170331493,"amount":2506972180,"leader_name":"*ST\u677e\u53d1","leader_change_pct":5.0},{"name":"\u519c\u836f\u5316\u80a5","stock_count":46,"change_pct":0.91,"volume":3094248020,"amount":33554647097,"leader_name":"\u6cf8\u5929\u5316","leader_change_pct":10.08},{"name":"\u7535\u529b\u884c\u4e1a","stock_count":62,"change_pct":0.58,"volume":5586204243,"amount":47847894569,"leader_name":"\u6daa\u9675\u7535\u529b","leader_change_pct":10.02},{"name":"\u94a2\u94c1\u884c\u4e1a","stock_count":60,"change_pct":0.56,"volume":7503794592,"amount":37863845059,"leader_name":"\u6cd5\u5c14\u80dc","leader_change_pct":10.05},{"name":"\u673a\u68b0\u884c\u4e1a","stock_count":211,"change_pct":0.18,"volume":8493015438,"amount":160007408267,"leader_name":"\u4f9d\u7c73\u5eb7","leader_change_pct":10.81},{"name":"\u53d1\u7535\u8bbe\u5907","stock_count":65,"change_pct":-0.0,"volume":4594806561,"amount":79468456075,"leader_name":"\u5408\u5eb7\u65b0\u80fd","leader_change_pct":9.47},{"name":"\u8239\u8236\u5236\u9020","stock_count":8,"change_pct":-0.04,"volume":903982845,"amount":13534812333,"leader_name":"\u4e9a\u5149\u79d1\u6280","leader_change_pct":6.02},{"name":"\u7535\u5668\u884c\u4e1a","stock_count":58,"change_pct":-0.06,"volume":2158403985,"amount":39730382735,"leader_name":"\u79d1\u8fdc\u667a\u6167","leader_change_pct":10.0},{"name":"\u4f9b\u6c34\u4f9b\u6c14","stock_count":25,"change_pct":-0.17,"volume":776253029,"amount":4727212222,"leader_name":"\u56fd\u65b0\u80fd\u6e90","leader_change_pct":4.67},{"name":"\u5316\u5de5\u884c\u4e1a","stock_count":150,"change_pct":-0.29,"volume":7408206064,"amount":94747492832,"leader_name":"\u91d1\u725b\u5316\u5de5","leader_change_pct":10.02},{"name":"\u516c\u8def\u6865\u6881","stock_count":20,"change_pct":-0.36,"volume":321461312,"amount":1819544105,"leader_name":"\u7696\u901a\u9ad8\u901f","leader_change_pct":2.25},{"name":"\u5316\u7ea4\u884c\u4e1a","stock_count":26,"change_pct":-0.37,"volume":1135108835,"amount":13219050530,"leader_name":"\u6850\u6606\u80a1\u4efd","leader_change_pct":6.13},{"name":"\u6c7d\u8f66\u5236\u9020","stock_count":103,"change_pct":-0.55,"volume":3869157863,"amount":71763506499,"leader_name":"\u98de\u9f99\u80a1\u4efd","leader_change_pct":10.0},{"name":"\u519c\u6797\u7267\u6e14","stock_count":64,"change_pct":-0.59,"volume":2708137293,"amount":25262159732,"leader_name":"\u4e9a\u76db\u96c6\u56e2","leader_change_pct":10.08},{"name":"\u4ea4\u901a\u8fd0\u8f93","stock_count":87,"change_pct":-0.61,"volume":5972879283,"amount":45385119570,"leader_name":"\u5357 \u4eac \u6e2f","leader_change_pct":10.02},{"name":"\u9020\u7eb8\u884c\u4e1a","stock_count":24,"change_pct":-0.62,"volume":1197132881,"amount":10003658335,"leader_name":"\u7ca4\u6842\u80a1\u4efd","leader_change_pct":8.44},{"name":"\u98df\u54c1\u884c\u4e1a","stock_count":58,"change_pct":-0.63,"volume":1285015361,"amount":13140411911,"leader_name":"\u4e9a\u94be\u56fd\u9645","leader_change_pct":7.7},{"name":"\u91d1\u878d\u884c\u4e1a","stock_count":51,"change_pct":-0.64,"volume":4574497158,"amount":47288500005,"leader_name":"\u5b81\u6ce2\u94f6\u884c","leader_change_pct":3.23},{"name":"\u4eea\u5668\u4eea\u8868","stock_count":48,"change_pct":-0.88,"volume":1656880221,"amount":32315556912,"leader_name":"\u8d6b\u7f8e\u96c6\u56e2","leader_change_pct":9.95},{"name":"\u7efc\u5408\u884c\u4e1a","stock_count":33,"change_pct":-0.9,"volume":1533749451,"amount":9118838011,"leader_name":"\u5e7f\u6c47\u80fd\u6e90","leader_change_pct":10.03},{"name":"\u6469\u6258\u8f66","stock_count":6,"change_pct":-0.91,"volume":184948043,"amount":3144594367,"leader_name":"\u5b97\u7533\u52a8\u529b","leader_change_pct":4.62},{"name":"\u6c34\u6ce5\u884c\u4e1a","stock_count":26,"change_pct":-0.93,"volume":661993462,"amount":5655351450,"leader_name":"\u534e\u65b0\u5efa\u6750","leader_change_pct":2.79},{"name":"\u7535\u5b50\u5668\u4ef6","stock_count":152,"change_pct":-0.94,"volume":10276920559,"amount":168868277469,"leader_name":"\u6653\u7a0b\u79d1\u6280","leader_change_pct":20.01},{"name":"\u73af\u4fdd\u884c\u4e1a","stock_count":27,"change_pct":-1.07,"volume":1147853699,"amount":7812882037,"leader_name":"\u5929\u58d5\u80fd\u6e90","leader_change_pct":5.97},{"name":"\u533b\u7597\u5668\u68b0","stock_count":31,"change_pct":-1.2,"volume":477651639,"amount":8275363692,"leader_name":"\u4e5d\u5b89\u533b\u7597","leader_change_pct":10.0},{"name":"\u5efa\u7b51\u5efa\u6750","stock_count":91,"change_pct":-1.31,"volume":4876536572,"amount":32045486266,"leader_name":"\u6210\u90fd\u8def\u6865","leader_change_pct":5.69},{"name":"\u5176\u5b83\u884c\u4e1a","stock_count":202,"change_pct":-1.35,"volume":1941093968,"amount":34154544297,"leader_name":"\u77f3\u82f1\u80a1\u4efd","leader_change_pct":6.18},{"name":"\u917f\u9152\u884c\u4e1a","stock_count":33,"change_pct":-1.53,"volume":314268063,"amount":14595505665,"leader_name":"\u91cd\u5e86\u5564\u9152","leader_change_pct":1.01},{"name":"\u6b21\u65b0\u80a1","stock_count":120,"change_pct":-1.7,"volume":602888272,"amount":28974079101,"leader_name":"N\u957f\u6c5f","leader_change_pct":11.99},{"name":"\u5bb6\u7535\u884c\u4e1a","stock_count":37,"change_pct":-1.76,"volume":1426455658,"amount":14878381979,"leader_name":"\u79be\u76db\u65b0\u6750","leader_change_pct":-0.14},{"name":"\u751f\u7269\u5236\u836f","stock_count":155,"change_pct":-2.01,"volume":3455569854,"amount":41681750842,"leader_name":"ST\u767e\u7075","leader_change_pct":4.8},{"name":"\u5f00\u53d1\u533a","stock_count":10,"change_pct":-2.05,"volume":177263933,"amount":3660864817,"leader_name":"\u9ad8\u65b0\u53d1\u5c55","leader_change_pct":-0.4},{"name":"\u5546\u4e1a\u767e\u8d27","stock_count":93,"change_pct":-2.06,"volume":3206241632,"amount":23455482880,"leader_name":"*ST\u6d77\u94a6","leader_change_pct":3.82},{"name":"\u623f\u5730\u4ea7","stock_count":123,"change_pct":-2.09,"volume":4720531161,"amount":28945118758,"leader_name":"\u62db\u91d1\u9ec4\u91d1","leader_change_pct":10.0},{"name":"\u9152\u5e97\u65c5\u6e38","stock_count":35,"change_pct":-2.09,"volume":633864312,"amount":9776774294,"leader_name":"*ST\u4e91\u7f51","leader_change_pct":3.31},{"name":"\u73bb\u7483\u884c\u4e1a","stock_count":19,"change_pct":-2.11,"volume":817786585,"amount":16465217375,"leader_name":"\u4e2d\u56fd\u5de8\u77f3","leader_change_pct":4.84},{"name":"\u670d\u88c5\u978b\u7c7b","stock_count":49,"change_pct":-2.15,"volume":1483299744,"amount":11538730894,"leader_name":"ST\u96ea\u53d1","leader_change_pct":4.91},{"name":"\u7535\u5b50\u4fe1\u606f","stock_count":247,"change_pct":-2.17,"volume":13630947621,"amount":278378527529,"leader_name":"\u7279\u53d1\u4fe1\u606f","leader_change_pct":10.02},{"name":"\u7eba\u7ec7\u884c\u4e1a","stock_count":42,"change_pct":-2.38,"volume":916649383,"amount":6718185946,"leader_name":"\u5c71\u9ad8\u73af\u80fd","leader_change_pct":4.1},{"name":"\u5bb6\u5177\u884c\u4e1a","stock_count":16,"change_pct":-2.39,"volume":344070785,"amount":3927862871,"leader_name":"\u53cb\u90a6\u540a\u9876","leader_change_pct":0.18},{"name":"\u5851\u6599\u5236\u54c1","stock_count":33,"change_pct":-2.46,"volume":1417147025,"amount":15038454609,"leader_name":"\u4e2d\u6765\u80a1\u4efd","leader_change_pct":9.53},{"name":"\u7269\u8d44\u5916\u8d38","stock_count":21,"change_pct":-2.56,"volume":557229605,"amount":4123197681,"leader_name":"\u4e2d\u5316\u56fd\u9645","leader_change_pct":2.14},{"name":"\u4f20\u5a92\u5a31\u4e50","stock_count":40,"change_pct":-3.19,"volume":1709335066,"amount":17304283746,"leader_name":"\u5b8c\u7f8e\u4e16\u754c","leader_change_pct":0.05},{"name":"\u5370\u5237\u5305\u88c5","stock_count":20,"change_pct":-3.86,"volume":1239270433,"amount":13930336817,"leader_name":"\u8862\u5dde\u4e1c\u5cf0","leader_change_pct":-0.84},{"name":"\u7eba\u7ec7\u673a\u68b0","stock_count":8,"change_pct":-4.33,"volume":238174302,"amount":2337737172,"leader_name":"\u4e2d\u6bc5\u8fbe","leader_change_pct":-1.83}],"fund_flow":[{"date":"2026-02-24","sh_close":4117.41,"sh_change":0.87,"sz_close":14291.57,"sz_change":1.36,"main_net_inflow":-31.78,"main_net_pct":-0.14,"super_large_net":63.78,"large_net":-95.55,"medium_net":-111.85,"small_net":143.62},{"date":"2026-02-25","sh_close":4147.23,"sh_change":0.72,"sz_close":14475.87,"sz_change":1.29,"main_net_inflow":-177.82,"main_net_pct":-0.72,"super_large_net":49.06,"large_net":-226.89,"medium_net":-89.71,"small_net":267.53},{"date":"2026-02-26","sh_close":4146.63,"sh_change":-0.01,"sz_close":14503.79,"sz_change":0.19,"main_net_inflow":-472.19,"main_net_pct":-1.86,"super_large_net":-166.81,"large_net":-305.38,"medium_net":85.22,"small_net":386.97},{"date":"2026-02-27","sh_close":4162.88,"sh_change":0.39,"sz_close":14495.09,"sz_change":-0.06,"main_net_inflow":-278.52,"main_net_pct":-1.12,"super_large_net":-77.31,"large_net":-201.21,"medium_net":11.83,"small_net":266.69},{"date":"2026-03-02","sh_close":4182.59,"sh_change":0.47,"sz_close":14465.79,"sz_change":-0.2,"main_net_inflow":-954.98,"main_net_pct":-3.16,"super_large_net":-515.92,"large_net":-439.06,"medium_net":208.01,"small_net":746.97}]};
+const FUND_DATA_MARKET = {
+  "indices": [
+    {
+      "code": "000001",
+      "name": "上证指数",
+      "price": 4122.68,
+      "change_pct": -1.43,
+      "change_amt": -59.91,
+      "volume": 1425790202336.2,
+      "high": 4197.23,
+      "low": 4116.01,
+      "open": 4189.41,
+      "prev_close": 4182.59,
+      "amplitude": 1.94
+    },
+    {
+      "code": "399001",
+      "name": "混证成指",
+      "price": 14022.39,
+      "change_pct": -3.07,
+      "change_amt": -443.4,
+      "volume": 1703720230871.1023,
+      "high": 14526.06,
+      "low": 14007.65,
+      "open": 14498.7,
+      "prev_close": 14465.79,
+      "amplitude": 3.58
+    },
+    {
+      "code": "399006",
+      "name": "创业板指",
+      "price": 3209.48,
+      "change_pct": -2.57,
+      "change_amt": -84.68,
+      "volume": 755758309246.14,
+      "high": 3331.26,
+      "low": 3206.62,
+      "open": 3316.63,
+      "prev_close": 3294.16,
+      "amplitude": 3.78
+    },
+    {
+      "code": "000300",
+      "name": "沪深300",
+      "price": 4655.9,
+      "change_pct": -1.54,
+      "change_amt": -72.77,
+      "volume": 801659243770.0,
+      "high": 4744.6,
+      "low": 4651.4,
+      "open": 4737.32,
+      "prev_close": 4728.67,
+      "amplitude": 1.97
+    },
+    {
+      "code": "000688",
+      "name": "科创50",
+      "price": 1388.41,
+      "change_pct": -5.21,
+      "change_amt": -76.36,
+      "volume": 88181853374.0,
+      "high": 1469.6,
+      "low": 1385.59,
+      "open": 1467.76,
+      "prev_close": 1464.77,
+      "amplitude": 5.74
+    },
+    {
+      "code": "000016",
+      "name": "上证50",
+      "price": 3014.27,
+      "change_pct": -1.06,
+      "change_amt": -32.2,
+      "volume": 221706040613.0,
+      "high": 3056.99,
+      "low": 3008.0,
+      "open": 3045.75,
+      "prev_close": 3046.47,
+      "amplitude": 1.61
+    },
+    {
+      "code": "899050",
+      "name": "北证50",
+      "price": 1415.15,
+      "change_pct": -4.11,
+      "change_amt": -60.58,
+      "volume": 28480463630.0,
+      "high": 1489.2,
+      "low": 1413.59,
+      "open": 1480.56,
+      "prev_close": 1475.73,
+      "amplitude": 5.12
+    }
+  ],
+  "industry_boards": [
+    {
+      "name": "石油行业",
+      "stock_count": 24,
+      "change_pct": 11.61,
+      "volume": 5252859409,
+      "amount": 50154659710,
+      "leader_name": "新锦动力",
+      "leader_change_pct": 20.02
+    },
+    {
+      "name": "供水供气",
+      "stock_count": 25,
+      "change_pct": 2.02,
+      "volume": 1504111441,
+      "amount": 10373749610,
+      "leader_name": "国新能源",
+      "leader_change_pct": 10.12
+    },
+    {
+      "name": "煤炭行业",
+      "stock_count": 41,
+      "change_pct": 1.56,
+      "volume": 7024857888,
+      "amount": 49323547225,
+      "leader_name": "陕西黑猫",
+      "leader_change_pct": 10.06
+    },
+    {
+      "name": "交通运输",
+      "stock_count": 87,
+      "change_pct": 0.18,
+      "volume": 7587744915,
+      "amount": 55955735465,
+      "leader_name": "中远海发",
+      "leader_change_pct": 10.17
+    },
+    {
+      "name": "金融行业",
+      "stock_count": 51,
+      "change_pct": 0.05,
+      "volume": 6242826646,
+      "amount": 63393240815,
+      "leader_name": "农业银行",
+      "leader_change_pct": 3.86
+    },
+    {
+      "name": "公路桥梁",
+      "stock_count": 20,
+      "change_pct": 0.03,
+      "volume": 395701588,
+      "amount": 2131388420,
+      "leader_name": "四川成渝",
+      "leader_change_pct": 1.28
+    },
+    {
+      "name": "环保行业",
+      "stock_count": 27,
+      "change_pct": -0.33,
+      "volume": 1637021212,
+      "amount": 11131634634,
+      "leader_name": "天壕能源",
+      "leader_change_pct": 20.07
+    },
+    {
+      "name": "酿酒行业",
+      "stock_count": 33,
+      "change_pct": -0.59,
+      "volume": 422825678,
+      "amount": 18449629990,
+      "leader_name": "燕京啤酒",
+      "leader_change_pct": 4.08
+    },
+    {
+      "name": "综合行业",
+      "stock_count": 33,
+      "change_pct": -0.81,
+      "volume": 1867878983,
+      "amount": 12129381709,
+      "leader_name": "广汇能源",
+      "leader_change_pct": 10.05
+    },
+    {
+      "name": "农林牧渔",
+      "stock_count": 64,
+      "change_pct": -1.23,
+      "volume": 3843051944,
+      "amount": 33492896388,
+      "leader_name": "亚盛集团",
+      "leader_change_pct": 10.07
+    },
+    {
+      "name": "陶瓷行业",
+      "stock_count": 8,
+      "change_pct": -1.43,
+      "volume": 218440189,
+      "amount": 4313403500,
+      "leader_name": "悦心健康",
+      "leader_change_pct": 1.1
+    },
+    {
+      "name": "家电行业",
+      "stock_count": 37,
+      "change_pct": -1.57,
+      "volume": 1461101013,
+      "amount": 15538054444,
+      "leader_name": "惠而浦",
+      "leader_change_pct": 0.92
+    },
+    {
+      "name": "酒店旅游",
+      "stock_count": 35,
+      "change_pct": -1.59,
+      "volume": 579839036,
+      "amount": 9773222096,
+      "leader_name": "三特索道",
+      "leader_change_pct": 2.36
+    },
+    {
+      "name": "食品行业",
+      "stock_count": 58,
+      "change_pct": -1.69,
+      "volume": 1433287898,
+      "amount": 14312995302,
+      "leader_name": "广农糖业",
+      "leader_change_pct": 6.25
+    },
+    {
+      "name": "电力行业",
+      "stock_count": 62,
+      "change_pct": -1.88,
+      "volume": 5595921288,
+      "amount": 48569033806,
+      "leader_name": "华银电力",
+      "leader_change_pct": 5.14
+    },
+    {
+      "name": "生物制药",
+      "stock_count": 155,
+      "change_pct": -2.06,
+      "volume": 3415344660,
+      "amount": 41222325847,
+      "leader_name": "新 和 成",
+      "leader_change_pct": 4.28
+    },
+    {
+      "name": "服装鞋类",
+      "stock_count": 49,
+      "change_pct": -2.45,
+      "volume": 1706098355,
+      "amount": 13440936583,
+      "leader_name": "ST雪发",
+      "leader_change_pct": 4.68
+    },
+    {
+      "name": "商业百货",
+      "stock_count": 93,
+      "change_pct": -2.5,
+      "volume": 3130992544,
+      "amount": 23022065545,
+      "leader_name": "翠微股份",
+      "leader_change_pct": 4.66
+    },
+    {
+      "name": "纺织行业",
+      "stock_count": 42,
+      "change_pct": -2.56,
+      "volume": 835825867,
+      "amount": 6455784084,
+      "leader_name": "百隆东方",
+      "leader_change_pct": 2.94
+    },
+    {
+      "name": "水泥行业",
+      "stock_count": 26,
+      "change_pct": -2.61,
+      "volume": 667025915,
+      "amount": 5205009540,
+      "leader_name": "新力金融",
+      "leader_change_pct": 1.4
+    },
+    {
+      "name": "钢铁行业",
+      "stock_count": 60,
+      "change_pct": -2.64,
+      "volume": 6676720211,
+      "amount": 34265700068,
+      "leader_name": "海南矿业",
+      "leader_change_pct": 5.9
+    },
+    {
+      "name": "物资外贸",
+      "stock_count": 21,
+      "change_pct": -2.69,
+      "volume": 558760757,
+      "amount": 4097155394,
+      "leader_name": "厦门国贸",
+      "leader_change_pct": 1.18
+    },
+    {
+      "name": "医疗器械",
+      "stock_count": 31,
+      "change_pct": -2.76,
+      "volume": 486273845,
+      "amount": 9141101852,
+      "leader_name": "九安医疗",
+      "leader_change_pct": 3.42
+    },
+    {
+      "name": "家具行业",
+      "stock_count": 16,
+      "change_pct": -2.81,
+      "volume": 380801010,
+      "amount": 4020604864,
+      "leader_name": "升达林业",
+      "leader_change_pct": -0.69
+    },
+    {
+      "name": "农药化肥",
+      "stock_count": 46,
+      "change_pct": -3.07,
+      "volume": 3400386614,
+      "amount": 36262989890,
+      "leader_name": "新奥股份",
+      "leader_change_pct": 10.02
+    },
+    {
+      "name": "造纸行业",
+      "stock_count": 24,
+      "change_pct": -3.07,
+      "volume": 1124037034,
+      "amount": 9677532647,
+      "leader_name": "粤桂股份",
+      "leader_change_pct": 3.1
+    },
+    {
+      "name": "房地产",
+      "stock_count": 123,
+      "change_pct": -3.26,
+      "volume": 4750921180,
+      "amount": 29329257668,
+      "leader_name": "爱旭股份",
+      "leader_change_pct": 2.75
+    },
+    {
+      "name": "汽车制造",
+      "stock_count": 103,
+      "change_pct": -3.35,
+      "volume": 3836718822,
+      "amount": 66112806908,
+      "leader_name": "跃岭股份",
+      "leader_change_pct": 3.65
+    },
+    {
+      "name": "建筑建材",
+      "stock_count": 91,
+      "change_pct": -3.38,
+      "volume": 4977906389,
+      "amount": 32527671550,
+      "leader_name": "百川能源",
+      "leader_change_pct": 9.93
+    },
+    {
+      "name": "其它行业",
+      "stock_count": 202,
+      "change_pct": -3.42,
+      "volume": 1751101809,
+      "amount": 32381556449,
+      "leader_name": "国新B股",
+      "leader_change_pct": 8.0
+    },
+    {
+      "name": "开发区",
+      "stock_count": 10,
+      "change_pct": -3.47,
+      "volume": 159249897,
+      "amount": 2890016340,
+      "leader_name": "南京高科",
+      "leader_change_pct": -0.68
+    },
+    {
+      "name": "电器行业",
+      "stock_count": 58,
+      "change_pct": -3.53,
+      "volume": 2486964746,
+      "amount": 44433114745,
+      "leader_name": "鹏辉能源",
+      "leader_change_pct": 8.96
+    },
+    {
+      "name": "机械行业",
+      "stock_count": 211,
+      "change_pct": -3.62,
+      "volume": 9420443889,
+      "amount": 166257711900,
+      "leader_name": "富瑞特装",
+      "leader_change_pct": 15.82
+    },
+    {
+      "name": "传媒娱乐",
+      "stock_count": 40,
+      "change_pct": -3.77,
+      "volume": 1616903966,
+      "amount": 15427906809,
+      "leader_name": "中南传媒",
+      "leader_change_pct": -0.27
+    },
+    {
+      "name": "塑料制品",
+      "stock_count": 33,
+      "change_pct": -3.88,
+      "volume": 1372534271,
+      "amount": 14705748622,
+      "leader_name": "胜利股份",
+      "leader_change_pct": 9.94
+    },
+    {
+      "name": "船舶制造",
+      "stock_count": 8,
+      "change_pct": -3.93,
+      "volume": 753407603,
+      "amount": 12135254649,
+      "leader_name": "中国船舶",
+      "leader_change_pct": -1.47
+    },
+    {
+      "name": "摩托车",
+      "stock_count": 6,
+      "change_pct": -4.05,
+      "volume": 205668772,
+      "amount": 3266539979,
+      "leader_name": "林海股份",
+      "leader_change_pct": -1.81
+    },
+    {
+      "name": "仪器仪表",
+      "stock_count": 48,
+      "change_pct": -4.06,
+      "volume": 1981550559,
+      "amount": 39064530797,
+      "leader_name": "安控科技",
+      "leader_change_pct": 1.7
+    },
+    {
+      "name": "发电设备",
+      "stock_count": 65,
+      "change_pct": -4.07,
+      "volume": 4537772340,
+      "amount": 75138853443,
+      "leader_name": "北京科锐",
+      "leader_change_pct": 10.01
+    },
+    {
+      "name": "化工行业",
+      "stock_count": 150,
+      "change_pct": -4.2,
+      "volume": 8031787298,
+      "amount": 100143672072,
+      "leader_name": "宝利国际",
+      "leader_change_pct": 12.66
+    },
+    {
+      "name": "纺织机械",
+      "stock_count": 8,
+      "change_pct": -4.26,
+      "volume": 236468875,
+      "amount": 2413553481,
+      "leader_name": "标准股份",
+      "leader_change_pct": -0.74
+    },
+    {
+      "name": "印刷包装",
+      "stock_count": 20,
+      "change_pct": -4.29,
+      "volume": 1116838718,
+      "amount": 12066147304,
+      "leader_name": "奥瑞金",
+      "leader_change_pct": -2.16
+    },
+    {
+      "name": "次新股",
+      "stock_count": 120,
+      "change_pct": -4.81,
+      "volume": 641732428,
+      "amount": 29647650501,
+      "leader_name": "长江能科",
+      "leader_change_pct": 30.0
+    },
+    {
+      "name": "电子信息",
+      "stock_count": 247,
+      "change_pct": -4.86,
+      "volume": 13916226167,
+      "amount": 281559657622,
+      "leader_name": "通鼎互联",
+      "leader_change_pct": 9.98
+    },
+    {
+      "name": "化纤行业",
+      "stock_count": 26,
+      "change_pct": -5.09,
+      "volume": 1224282085,
+      "amount": 14112063599,
+      "leader_name": "协鑫能科",
+      "leader_change_pct": 3.06
+    },
+    {
+      "name": "电子器件",
+      "stock_count": 152,
+      "change_pct": -5.12,
+      "volume": 10709630352,
+      "amount": 185755707573,
+      "leader_name": "协鑫集成",
+      "leader_change_pct": 10.02
+    },
+    {
+      "name": "有色金属",
+      "stock_count": 72,
+      "change_pct": -6.23,
+      "volume": 7750717026,
+      "amount": 185889593515,
+      "leader_name": "金瑞矿业",
+      "leader_change_pct": 10.02
+    },
+    {
+      "name": "玻璃行业",
+      "stock_count": 19,
+      "change_pct": -7.36,
+      "volume": 832063531,
+      "amount": 18019352062,
+      "leader_name": "华建集团",
+      "leader_change_pct": 0.49
+    },
+    {
+      "name": "飞机制造",
+      "stock_count": 14,
+      "change_pct": -8.2,
+      "volume": 923211682,
+      "amount": 31931488981,
+      "leader_name": "威海广泰",
+      "leader_change_pct": -4.1
+    }
+  ],
+  "fund_flow": []
+};
