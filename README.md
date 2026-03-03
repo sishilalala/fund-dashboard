@@ -2,7 +2,7 @@
 
 ## Live Site
 
-**https://shihtalks.github.io/fund-dashboard/**
+**https://sishilalala.github.io/fund-dashboard/**
 
 Daily Chinese mutual fund screening dashboard with:
 - A-share market overview (indices, industry heatmap, fund flow)
