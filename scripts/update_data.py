@@ -30,7 +30,7 @@ def fetch_indices():
     }
     name_map = {
         "000001": "\u4e0a\u8bc1\u6307\u6570", "399001": "\u6df7\u8bc1\u6210\u6307", "399006": "\u521b\u4e1a\u677f\u6307",
-        "000300": "\u6c2a\u6df1300", "000688": "\u79d1\u521b50", "000016": "\u4e0a\u8bc150", "899050": "\u5317\u8bc150",
+        "000300": "\u6caa\u6df1300", "000688": "\u79d1\u521b50", "000016": "\u4e0a\u8bc150", "899050": "\u5317\u8bc150",
     }
     try:
         resp = requests.get(url, params=params, headers=headers, timeout=15)
