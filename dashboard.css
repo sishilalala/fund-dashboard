@@ -1,4 +1,4 @@
-/* dashboard.css — Fund Dashboard Layout & Components */
+/* dashboard.css \u2014 Fund Dashboard Layout & Components */
 
 /* ============================================
    LAYOUT
@@ -513,13 +513,13 @@ html, body {
   line-height: 1.4;
 }
 
-.type-股票型 { background: rgba(232,146,52,0.15); color: var(--color-badge-stock); }
-.type-混合型 { background: rgba(91,148,166,0.15); color: var(--color-badge-mixed); }
-.type-指数型 { background: rgba(154,111,216,0.15); color: var(--color-badge-index); }
-.type-债券型 { background: rgba(139,143,154,0.15); color: var(--color-badge-bond); }
+.type-\u80a1\u7968\u578b { background: rgba(232,146,52,0.15); color: var(--color-badge-stock); }
+.type-\u6df7\u5408\u578b { background: rgba(91,148,166,0.15); color: var(--color-badge-mixed); }
+.type-\u6307\u6570\u578b { background: rgba(154,111,216,0.15); color: var(--color-badge-index); }
+.type-\u503a\u5238\u578b { background: rgba(139,143,154,0.15); color: var(--color-badge-bond); }
 .type-QDII  { background: rgba(69,168,160,0.15); color: var(--color-badge-qdii); }
 .type-FOF   { background: rgba(196,120,168,0.15); color: var(--color-badge-fof); }
-.type-其他  { background: rgba(122,126,136,0.15); color: var(--color-badge-other); }
+.type-\u5176\u4ed6  { background: rgba(122,126,136,0.15); color: var(--color-badge-other); }
 
 /* ============================================
    INSIGHTS
@@ -647,5 +647,135 @@ html, body {
 
   .insights-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   NEWS SECTION
+   ============================================ */
+.news-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.news-filter-btn {
+  padding: 5px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--color-divider);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 180ms ease;
+  font-family: inherit;
+}
+
+.news-filter-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.news-filter-btn.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--color-divider);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.news-item {
+  display: block;
+  padding: 16px 20px;
+  background: var(--color-surface);
+  text-decoration: none;
+  color: inherit;
+  transition: background 180ms ease;
+}
+
+.news-item:hover {
+  background: var(--color-surface-raised, rgba(255,255,255,0.03));
+}
+
+.news-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.news-cat {
+  font-size: 12px;
+  color: var(--color-accent);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.news-date {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.news-title {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.news-summary {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-source {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+.news-disclaimer {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+.news-empty {
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+  .news-item {
+    padding: 12px 14px;
+  }
+  .news-title {
+    font-size: 14px;
+  }
+  .news-summary {
+    -webkit-line-clamp: 2;
   }
 }
