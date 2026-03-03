@@ -1,385 +1,218 @@
 #!/usr/bin/env python3
 """
-update_data.py — Daily fund data updater for fund-dashboard
-
-This script fetches real fund/market data and updates data.js.
-Scheduled via GitHub Actions to run on trading days.
-
-Data sources:
-  - 东方财富 (eastmoney.com) API — market indices, fund flow
-  - 天天基金 (fund.eastmoney.com) — fund rankings and returns
+每日自动采集公募基金数据，生成 data.js
+数据来源：AKShare（东方财富/天天基金）、新浪财经
 """
-
 import json
-import time
-import datetime
+import re
+import sys
+from datetime import datetime
+
+import akshare as ak
+import pandas as pd
 import requests
-from pathlib import Path
 
-# ──────────────────────────────────────────────
-# CONFIG
-# ──────────────────────────────────────────────
-OUTPUT_PATH = Path(__file__).parent.parent / "data.js"
-
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/120.0.0.0 Safari/537.36"
-    ),
-    "Referer": "https://fund.eastmoney.com/",
-}
-
-SESSION = requests.Session()
-SESSION.headers.update(HEADERS)
-
-# ──────────────────────────────────────────────
-# HELPERS
-# ──────────────────────────────────────────────
-
-def safe_float(v, default=0.0):
-    try:
-        return float(v)
-    except (TypeError, ValueError):
-        return default
-
-def safe_get(url, params=None, retries=3, timeout=15):
-    for attempt in range(retries):
-        try:
-            r = SESSION.get(url, params=params, timeout=timeout)
-            r.raise_for_status()
-            return r
-        except Exception as e:
-            print(f"  [warn] attempt {attempt+1} failed: {e}")
-            time.sleep(2 ** attempt)
-    return None
-
-# ──────────────────────────────────────────────
-# 1. MARKET INDICES
-# ──────────────────────────────────────────────
-
-INDEX_CODES = [
-    "1.000001",   # 上证指数
-    "0.399001",   # 深证成指
-    "0.399006",   # 创业板指
-    "1.000300",   # 沪深300
-    "1.000688",   # 科创50
-    "1.000016",   # 上证50
-    "0.899050",   # 北证50
-]
 
 def fetch_indices():
-    print("[1] Fetching market indices...")
+    """获取A股主要指数"""
+    print("Fetching A-share indices...")
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Referer": "https://quote.eastmoney.com/",
+    }
     url = "https://push2.eastmoney.com/api/qt/ulist.np/get"
     params = {
         "fltt": 2,
-        "invt": 2,
-        "fields": "f2,f3,f4,f5,f6,f15,f16,f17,f18,f23",  # price,pct,amt,vol,turnover,high,low,open,close,amp
-        "secids": ",".join(INDEX_CODES),
-        "_": int(time.time() * 1000),
+        "secids": "1.000001,0.399001,0.399006,1.000300,1.000688,1.000016,0.899050",
+        "fields": "f1,f2,f3,f4,f5,f6,f7,f8,f12,f13,f14,f15,f16,f17,f18",
+        "ut": "fa5fd1943c7b386f172d6893dbfba10b",
     }
-    r = safe_get(url, params=params)
-    if not r:
-        return []
-
+    name_map = {
+        "000001": "上证指数", "399001": "深证成指", "399006": "创业板指",
+        "000300": "沪深300", "000688": "科创50", "000016": "上证50", "899050": "北证50",
+    }
     try:
-        data = r.json()
-        items = data.get("data", {}).get("diff", [])
-        code_map = {
-            "000001": "上证指数", "399001": "深证成指", "399006": "创业板指",
-            "000300": "沪深300", "000688": "科创50", "000016": "上证50", "899050": "北证50"
-        }
-        result = []
-        for item in items:
-            code = str(item.get("f12", ""))
-            result.append({
-                "code": code,
-                "name": code_map.get(code, item.get("f14", "")),
-                "price":       safe_float(item.get("f2")),
-                "change_pct":  safe_float(item.get("f3")),
-                "change_amt":  safe_float(item.get("f4")),
-                "volume":      safe_float(item.get("f5")),
-                "high":        safe_float(item.get("f15")),
-                "low":         safe_float(item.get("f16")),
-                "open":        safe_float(item.get("f17")),
-                "prev_close":  safe_float(item.get("f18")),
-                "amplitude":   safe_float(item.get("f23")),
-            })
-        print(f"   → {len(result)} indices fetched")
-        return result
+        resp = requests.get(url, params=params, headers=headers, timeout=15)
+        data = resp.json()
+        if data.get("data") and data["data"].get("diff"):
+            indices = []
+            for item in data["data"]["diff"]:
+                code = item.get("f12", "")
+                indices.append({
+                    "code": code,
+                    "name": name_map.get(code, item.get("f14", "")),
+                    "price": item.get("f2", 0),
+                    "change_pct": item.get("f3", 0),
+                    "change_amt": item.get("f4", 0),
+                    "volume": item.get("f6", 0),
+                    "high": item.get("f15", 0),
+                    "low": item.get("f16", 0),
+                    "open": item.get("f17", 0),
+                    "prev_close": item.get("f18", 0),
+                    "amplitude": item.get("f7", 0),
+                })
+            print(f"  Got {len(indices)} indices")
+            return indices
     except Exception as e:
-        print(f"   [error] parsing indices: {e}")
-        return []
+        print(f"  Error: {e}")
+    return []
 
-# ──────────────────────────────────────────────
-# 2. INDUSTRY BOARDS
-# ──────────────────────────────────────────────
 
 def fetch_industry_boards():
-    print("[2] Fetching industry boards...")
-    url = "https://push2.eastmoney.com/api/qt/clist/get"
-    params = {
-        "pn": 1, "pz": 50, "po": 1, "np": 1, "ut": "bd1d9ddb04089700cf9c27f6f7426281",
-        "fltt": 2, "invt": 2,
-        "fid": "f3",
-        "fs": "m:90+t:2+f:!50",  # SW industry boards
-        "fields": "f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f12,f13,f14,f15,f16,f17,f18,f20,f21,f23,f24,f25,f26,f22,f33,f11,f62,f128,f136,f115,f152",
-        "_": int(time.time() * 1000),
-    }
-    r = safe_get(url, params=params)
-    if not r:
-        return []
+    """获取行业板块涨跌排名（新浪财经）"""
+    print("Fetching industry boards...")
     try:
-        data = r.json()
-        items = data.get("data", {}).get("diff", [])
-        result = []
-        for item in items:
-            result.append({
-                "name":       item.get("f14", ""),
-                "change_pct": safe_float(item.get("f3")),
-                "main_flow":  safe_float(item.get("f62")),
-            })
-        print(f"   → {len(result)} boards fetched")
-        return result
+        url = "https://vip.stock.finance.sina.com.cn/q/view/newSinaHy.php"
+        resp = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+        match = re.search(r"=\s*({.*})", resp.text, re.DOTALL)
+        if match:
+            raw = json.loads(match.group(1))
+            boards = []
+            for key, val in raw.items():
+                parts = val.split(",")
+                if len(parts) >= 13:
+                    boards.append({
+                        "name": parts[1],
+                        "stock_count": int(parts[2]),
+                        "change_pct": round(float(parts[5]), 2),
+                        "volume": int(parts[6]),
+                        "amount": int(parts[7]),
+                        "leader_name": parts[12],
+                        "leader_change_pct": round(float(parts[9]), 2),
+                    })
+            boards.sort(key=lambda x: x["change_pct"], reverse=True)
+            print(f"  Got {len(boards)} boards")
+            return boards
     except Exception as e:
-        print(f"   [error] parsing boards: {e}")
-        return []
+        print(f"  Error: {e}")
+    return []
 
-# ──────────────────────────────────────────────
-# 3. FUND FLOW (MARKET LEVEL)
-# ──────────────────────────────────────────────
 
 def fetch_fund_flow():
-    print("[3] Fetching market-level fund flow...")
-    url = "https://push2his.eastmoney.com/api/qt/kamt/kline/get"
-    params = {
-        "fields1": "f1,f2,f3,f7",
-        "fields2": "f51,f52,f53,f54,f55,f56,f57,f58",
-        "klt": 101,  # daily
-        "lmt": 5,
-        "_": int(time.time() * 1000),
-    }
-    r = safe_get(url, params=params)
-    if not r:
-        return []
+    """获取大盘资金流向（最近5天）"""
+    print("Fetching market fund flow...")
     try:
-        data = r.json()
-        klines = data.get("data", {}).get("klines", [])
-        result = []
-        for line in klines:
-            parts = line.split(",")
-            if len(parts) < 7:
-                continue
-            result.append({
-                "date":             parts[0],
-                "main_net":         safe_float(parts[1]) * 1e8,
-                "super_large_net":  safe_float(parts[2]) * 1e8,
-                "large_net":        safe_float(parts[3]) * 1e8,
-                "medium_net":       safe_float(parts[4]) * 1e8,
-                "small_net":        safe_float(parts[5]) * 1e8,
+        df = ak.stock_market_fund_flow()
+        flows = []
+        for _, row in df.tail(5).iterrows():
+            flows.append({
+                "date": str(row["日期"])[:10],
+                "sh_close": round(float(row["上证-收盘价"]), 2),
+                "sh_change": round(float(row["上证-涨跌幅"]), 2),
+                "sz_close": round(float(row["深证-收盘价"]), 2),
+                "sz_change": round(float(row["深证-涨跌幅"]), 2),
+                "main_net_inflow": round(float(row["主力净流入-净额"]) / 1e8, 2),
+                "main_net_pct": round(float(row["主力净流入-净占比"]), 2),
+                "super_large_net": round(float(row["超大单净流入-净额"]) / 1e8, 2),
+                "large_net": round(float(row["大单净流入-净额"]) / 1e8, 2),
+                "medium_net": round(float(row["中单净流入-净额"]) / 1e8, 2),
+                "small_net": round(float(row["小单净流入-净额"]) / 1e8, 2),
             })
-        result.sort(key=lambda x: x["date"], reverse=True)
-        print(f"   → {len(result)} days of fund flow fetched")
-        return result
+        print(f"  Got {len(flows)} days")
+        return flows
     except Exception as e:
-        print(f"   [error] parsing fund flow: {e}")
-        return []
+        print(f"  Error: {e}")
+    return []
 
-# ──────────────────────────────────────────────
-# 4. FUND RANKINGS
-# ──────────────────────────────────────────────
 
-FUND_TYPE_MAP = {
-    "001": "股票型",
-    "002": "混合型",
-    "003": "债券型",
-    "004": "混合型",  # 货币型 → skip or relabel
-    "005": "债券型",
-    "006": "QDII",
-    "007": "货币型",
-    "008": "指数型",
-    "009": "股票型",
-    "010": "FOF",
-    "011": "指数型",
-    "013": "QDII",
-}
+def classify_fund(name):
+    name = str(name)
+    if any(k in name for k in ["指数", "ETF", "LOF"]):
+        return "指数型"
+    if any(k in name for k in ["债", "信用", "利率", "纯债"]):
+        return "债券型"
+    if any(k in name for k in ["混合", "配置", "平衡", "灵活"]):
+        return "混合型"
+    if any(k in name for k in ["股票", "成长", "价值"]):
+        return "股票型"
+    if any(k in name for k in ["QDII", "美国", "美元", "港股", "全球", "亚太", "恒生", "纳斯达克", "标普"]):
+        return "QDII"
+    if any(k in name for k in ["FOF", "养老"]):
+        return "FOF"
+    return "其他"
 
-def fetch_funds_by_type(fund_type_code, type_label, top_n=50):
-    """Fetch top N funds of a given type from 天天基金."""
-    url = "https://fund.eastmoney.com/data/rankhandler.aspx"
-    params = {
-        "op": "ph",
-        "dt": "kf",
-        "ft": fund_type_code,
-        "rs": "",
-        "gs": 0,
-        "sc": "1nzf",  # sort by 1-year return
-        "st": "desc",
-        "pi": 1,
-        "pn": top_n,
-        "dx": 1,
-        "v": int(time.time() * 1000),
-    }
-    r = safe_get(url, params=params)
-    if not r:
-        return []
+
+def fetch_top_funds():
+    """获取全部基金涨幅 Top 50"""
+    print("Fetching top 50 funds (all types)...")
     try:
-        # Response format: var rankData = {...}
-        text = r.text
-        start = text.index("[") 
-        end = text.rindex("]") + 1
-        arr = json.loads(text[start:end])
-        result = []
-        for item in arr:
-            parts = item.split(",")
-            if len(parts) < 20:
-                continue
-            try:
-                result.append({
-                    "code":         parts[0],
-                    "name":         parts[1],
-                    "type":         type_label,
-                    "daily_return": safe_float(parts[8]),
-                    "week_1":       safe_float(parts[11]),
-                    "month_1":      safe_float(parts[13]),
-                    "month_3":      safe_float(parts[14]),
-                    "month_6":      safe_float(parts[15]),
-                    "year_1":       safe_float(parts[16]),
-                    "ytd":          safe_float(parts[17]),
-                    "fee":          parts[27] + "%" if len(parts) > 27 else "—",
-                })
-            except Exception:
-                continue
-        return result
+        df = ak.fund_open_fund_rank_em(symbol="全部")
+        df["日增长率"] = pd.to_numeric(df["日增长率"], errors="coerce")
+        df = df.dropna(subset=["日增长率"]).sort_values("日增长率", ascending=False)
+        funds = []
+        for _, row in df.head(50).iterrows():
+            funds.append({
+                "code": str(row["基金代码"]),
+                "name": str(row["基金简称"]),
+                "date": str(row["日期"]),
+                "nav": round(float(row["单位净值"]), 4) if pd.notna(row["单位净值"]) else None,
+                "acc_nav": round(float(row["累计净值"]), 4) if pd.notna(row["累计净值"]) else None,
+                "daily_return": round(float(row["日增长率"]), 2),
+                "week_1": round(float(row["近1周"]), 2) if pd.notna(row["近1周"]) else None,
+                "month_1": round(float(row["近1月"]), 2) if pd.notna(row["近1月"]) else None,
+                "month_3": round(float(row["近3月"]), 2) if pd.notna(row["近3月"]) else None,
+                "month_6": round(float(row["近6月"]), 2) if pd.notna(row["近6月"]) else None,
+                "year_1": round(float(row["近1年"]), 2) if pd.notna(row["近1年"]) else None,
+                "ytd": round(float(row["今年来"]), 2) if pd.notna(row["今年来"]) else None,
+                "since_inception": round(float(row["成立来"]), 2) if pd.notna(row["成立来"]) else None,
+                "fee": str(row["手续费"]) if pd.notna(row["手续费"]) else None,
+                "type": classify_fund(row["基金简称"]),
+            })
+        print(f"  Got {len(funds)} funds")
+        return funds
     except Exception as e:
-        print(f"   [error] parsing fund type {type_label}: {e}")
-        return []
+        print(f"  Error: {e}")
+    return []
 
-def fetch_all_funds():
-    print("[4] Fetching fund rankings...")
-    type_map = [
-        ("001", "股票型"),
-        ("002", "混合型"),
-        ("003", "债券型"),
-        ("011", "指数型"),
-        ("006", "QDII"),
-        ("010", "FOF"),
-    ]
-    all_funds = []
-    for code, label in type_map:
-        funds = fetch_funds_by_type(code, label, top_n=100)
-        print(f"   → {label}: {len(funds)} funds")
-        all_funds.extend(funds)
-        time.sleep(0.5)  # polite delay
-    return all_funds
 
-# ──────────────────────────────────────────────
-# 5. INSIGHTS (auto-generated)
-# ──────────────────────────────────────────────
+def fetch_category_funds():
+    """获取各类型基金 Top 30"""
+    print("Fetching per-category top 30...")
+    category_funds = {}
+    for symbol in ["股票型", "混合型", "债券型", "指数型", "QDII", "FOF"]:
+        try:
+            df = ak.fund_open_fund_rank_em(symbol=symbol)
+            df["日增长率"] = pd.to_numeric(df["日增长率"], errors="coerce")
+            df = df.dropna(subset=["日增长率"]).sort_values("日增长率", ascending=False)
+            top = []
+            for _, row in df.head(30).iterrows():
+                top.append({
+                    "code": str(row["基金代码"]),
+                    "name": str(row["基金简称"]),
+                    "daily_return": round(float(row["日增长率"]), 2),
+                    "week_1": round(float(row["近1周"]), 2) if pd.notna(row["近1周"]) else None,
+                    "month_1": round(float(row["近1月"]), 2) if pd.notna(row["近1月"]) else None,
+                    "month_3": round(float(row["近3月"]), 2) if pd.notna(row["近3月"]) else None,
+                    "month_6": round(float(row["近6月"]), 2) if pd.notna(row["近6月"]) else None,
+                    "year_1": round(float(row["近1年"]), 2) if pd.notna(row["近1年"]) else None,
+                    "ytd": round(float(row["今年来"]), 2) if pd.notna(row["今年来"]) else None,
+                    "fee": str(row["手续费"]) if pd.notna(row["手续费"]) else None,
+                })
+            category_funds[symbol] = top
+            print(f"  {symbol}: {len(top)} funds")
+        except Exception as e:
+            print(f"  {symbol} Error: {e}")
+    return category_funds
 
-def generate_insights(indices, boards, fund_flow, funds):
-    insights = []
-
-    # Best / worst board
-    if boards:
-        best  = max(boards, key=lambda b: b["change_pct"])
-        worst = min(boards, key=lambda b: b["change_pct"])
-        insights.append({
-            "label": "今日最强板块",
-            "value": f"{best['name']}领涨，<span class='highlight-up'>{best['change_pct']:+.2f}%</span>，主力净流入 <span class='highlight-up'>{best['main_flow']/1e8:+.1f}亿</span>",
-            "sub":   "板块资金流入显著，建议关注相关基金"
-        })
-        insights.append({
-            "label": "今日最弱板块",
-            "value": f"{worst['name']}跌幅居首，<span class='highlight-down'>{worst['change_pct']:+.2f}%</span>，资金持续流出",
-            "sub":   "板块承压，建议回避相关主题基金"
-        })
-
-    # Top fund
-    if funds:
-        top = max(funds, key=lambda f: f["daily_return"])
-        insights.append({
-            "label": "基金综合排名冠军",
-            "value": f"<span class='highlight-accent'>{top['name']} ({top['code']})</span> 日涨 <span class='highlight-up'>{top['daily_return']:+.2f}%</span>",
-            "sub":   f"今年来累计涨幅 {top['ytd']:+.2f}%"
-        })
-
-    # Fund flow summary
-    if fund_flow:
-        today = fund_flow[0]
-        main = today["main_net"]
-        super_l = today["super_large_net"]
-        large = today["large_net"]
-        small = today["small_net"]
-        sentiment = "偏多" if main > 0 else "偏空"
-        insights.append({
-            "label": "资金流向提示",
-            "value": f"今日主力净流入 <span class='{'highlight-up' if main>0 else "highlight-down"}'>{main/1e8:+.1f}亿</span>，市场情绪{sentiment}",
-            "sub":   f"超大单净流入 {super_l/1e8:+.1f}亿，大单净流入 {large/1e8:+.1f}亿，小单净流出 {small/1e8:+.1f}亿"
-        })
-
-    # Index overview
-    if indices:
-        hs300 = next((i for i in indices if i["code"] == "000300"), None)
-        sh    = next((i for i in indices if i["code"] == "000001"), None)
-        cyb   = next((i for i in indices if i["code"] == "399006"), None)
-        parts = []
-        for idx in [hs300, sh, cyb]:
-            if idx:
-                cls = "highlight-up" if idx["change_pct"] > 0 else "highlight-down"
-                parts.append(f"{idx['name']} <span class='{cls}'>{idx['change_pct']:+.2f}%</span>")
-        insights.append({
-            "label": "今日指数概览",
-            "value": "，".join(parts),
-            "sub":   "大盘整体走势，供参考"
-        })
-
-    return insights
-
-# ──────────────────────────────────────────────
-# MAIN
-# ──────────────────────────────────────────────
 
 def main():
-    now = datetime.datetime.now()
-    today = now.strftime("%Y-%m-%d")
-    update_time = now.strftime("%Y-%m-%d %H:%M:%S")
-
-    # Calculate next update (next trading day 09:35)
-    next_day = now + datetime.timedelta(days=1)
-    while next_day.weekday() >= 5:  # skip weekends
-        next_day += datetime.timedelta(days=1)
-    next_update = next_day.strftime("%Y-%m-%d") + " 09:35:00"
-
-    print(f"\n=== Fund Dashboard Data Update ===")
-    print(f"Time: {update_time}")
-    print()
-
-    indices      = fetch_indices()
-    boards       = fetch_industry_boards()
-    fund_flow    = fetch_fund_flow()
-    funds        = fetch_all_funds()
-    insights     = generate_insights(indices, boards, fund_flow, funds)
-
-    payload = {
-        "indices":         indices,
-        "industry_boards": boards,
-        "fund_flow":       fund_flow,
-        "funds":           funds,
-        "insights":        insights,
-        "meta": {
-            "trading_date": today,
-            "update_time":  update_time,
-            "next_update":  next_update,
-            "data_source":  "东方财富、天天基金",
-        }
+    data = {}
+    data["indices"] = fetch_indices()
+    data["industry_boards"] = fetch_industry_boards()
+    data["fund_flow"] = fetch_fund_flow()
+    data["top_funds"] = fetch_top_funds()
+    data["category_funds"] = fetch_category_funds()
+    data["metadata"] = {
+        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "trading_date": data["top_funds"][0]["date"] if data["top_funds"] else datetime.now().strftime("%Y-%m-%d"),
     }
 
-    js_content = "const FUND_DATA = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n"
-    OUTPUT_PATH.write_text(js_content, encoding="utf-8")
+    # Write data.js
+    js = "const FUND_DATA = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n"
+    with open("data.js", "w", encoding="utf-8") as f:
+        f.write(js)
+    print(f"\ndata.js written ({len(js)/1024:.1f} KB)")
 
-    print(f"\n✓ data.js updated: {OUTPUT_PATH}")
-    print(f"  Indices: {len(indices)}, Boards: {len(boards)}, Funds: {len(funds)}, Flow days: {len(fund_flow)}")
 
 if __name__ == "__main__":
     main()
