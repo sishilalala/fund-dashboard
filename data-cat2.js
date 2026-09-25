@@ -13,18 +13,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "161724",
-      "name": "招商中证煤炭等权指数(LOF)A",
-      "daily_return": 0.73,
-      "week_1": 0.52,
-      "month_1": -1.05,
-      "month_3": 12.08,
-      "month_6": 0.32,
-      "year_1": 23.97,
-      "ytd": 24.79,
-      "fee": "0.10%"
-    },
-    {
       "code": "013596",
       "name": "招商中证煤炭等权指数(LOF)C",
       "daily_return": 0.73,
@@ -37,16 +25,16 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "004243",
-      "name": "广发道琼斯石油指数人民币C",
-      "daily_return": 0.65,
-      "week_1": -4.33,
-      "month_1": -2.74,
-      "month_3": 17.73,
-      "month_6": 5.62,
-      "year_1": 31.53,
-      "ytd": 36.32,
-      "fee": "0.00%"
+      "code": "161724",
+      "name": "招商中证煤炭等权指数(LOF)A",
+      "daily_return": 0.73,
+      "week_1": 0.52,
+      "month_1": -1.05,
+      "month_3": 12.08,
+      "month_6": 0.32,
+      "year_1": 23.97,
+      "ytd": 24.79,
+      "fee": "0.10%"
     },
     {
       "code": "023144",
@@ -61,15 +49,15 @@ const FUND_DATA_CAT2 = {
       "fee": "0.10%"
     },
     {
-      "code": "019710",
-      "name": "广发道琼斯石油指数(QDII-LOF)人民币E",
+      "code": "004243",
+      "name": "广发道琼斯石油指数人民币C",
       "daily_return": 0.65,
       "week_1": -4.33,
-      "month_1": -2.75,
-      "month_3": 17.7,
-      "month_6": 5.57,
-      "year_1": 31.34,
-      "ytd": 36.16,
+      "month_1": -2.74,
+      "month_3": 17.73,
+      "month_6": 5.62,
+      "year_1": 31.53,
+      "ytd": 36.32,
       "fee": "0.00%"
     },
     {
@@ -83,6 +71,18 @@ const FUND_DATA_CAT2 = {
       "year_1": 30.13,
       "ytd": 38.67,
       "fee": "0.10%"
+    },
+    {
+      "code": "019710",
+      "name": "广发道琼斯石油指数(QDII-LOF)人民币E",
+      "daily_return": 0.65,
+      "week_1": -4.33,
+      "month_1": -2.75,
+      "month_3": 17.7,
+      "month_6": 5.57,
+      "year_1": 31.34,
+      "ytd": 36.16,
+      "fee": "0.00%"
     },
     {
       "code": "018853",
@@ -109,18 +109,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "025201",
-      "name": "景顺长城国证港股通红利低波动率ETF联接C",
-      "daily_return": 0.63,
-      "week_1": 0.46,
-      "month_1": -3.24,
-      "month_3": 8.37,
-      "month_6": -3.17,
-      "year_1": 9.62,
-      "ytd": 6.63,
-      "fee": "0.00%"
-    },
-    {
       "code": "025200",
       "name": "景顺长城国证港股通红利低波动率ETF联接A",
       "daily_return": 0.63,
@@ -133,15 +121,15 @@ const FUND_DATA_CAT2 = {
       "fee": "0.10%"
     },
     {
-      "code": "016573",
-      "name": "招商中证银行AH价格优选ETF发起式联接C",
-      "daily_return": 0.61,
-      "week_1": 0.55,
-      "month_1": 1.69,
-      "month_3": 10.5,
-      "month_6": 8.04,
-      "year_1": 7.62,
-      "ytd": 4.64,
+      "code": "025201",
+      "name": "景顺长城国证港股通红利低波动率ETF联接C",
+      "daily_return": 0.63,
+      "week_1": 0.46,
+      "month_1": -3.24,
+      "month_3": 8.37,
+      "month_6": -3.17,
+      "year_1": 9.62,
+      "ytd": 6.63,
       "fee": "0.00%"
     },
     {
@@ -155,6 +143,18 @@ const FUND_DATA_CAT2 = {
       "year_1": 7.95,
       "ytd": 4.87,
       "fee": "0.12%"
+    },
+    {
+      "code": "016573",
+      "name": "招商中证银行AH价格优选ETF发起式联接C",
+      "daily_return": 0.61,
+      "week_1": 0.55,
+      "month_1": 1.69,
+      "month_3": 10.5,
+      "month_6": 8.04,
+      "year_1": 7.62,
+      "ytd": 4.64,
+      "fee": "0.00%"
     },
     {
       "code": "021971",
@@ -181,6 +181,30 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
+      "code": "022720",
+      "name": "广发中证国新港股通央企红利ETF发起式联接C",
+      "daily_return": 0.57,
+      "week_1": -0.21,
+      "month_1": -2.17,
+      "month_3": 4.03,
+      "month_6": -7.75,
+      "year_1": 2.17,
+      "ytd": -0.86,
+      "fee": "0.00%"
+    },
+    {
+      "code": "024371",
+      "name": "天弘中证港股通央企红利ETF联接A",
+      "daily_return": 0.57,
+      "week_1": -0.5,
+      "month_1": -0.28,
+      "month_3": 6.58,
+      "month_6": -3.19,
+      "year_1": null,
+      "ytd": -1.34,
+      "fee": "0.10%"
+    },
+    {
       "code": "021962",
       "name": "景顺长城中证国新港股通央企红利ETF联接C",
       "daily_return": 0.57,
@@ -205,18 +229,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.12%"
     },
     {
-      "code": "024371",
-      "name": "天弘中证港股通央企红利ETF联接A",
-      "daily_return": 0.57,
-      "week_1": -0.5,
-      "month_1": -0.28,
-      "month_3": 6.58,
-      "month_6": -3.19,
-      "year_1": null,
-      "ytd": -1.34,
-      "fee": "0.10%"
-    },
-    {
       "code": "021961",
       "name": "景顺长城中证国新港股通央企红利ETF联接A",
       "daily_return": 0.57,
@@ -227,18 +239,6 @@ const FUND_DATA_CAT2 = {
       "year_1": 2.13,
       "ytd": -0.64,
       "fee": "0.12%"
-    },
-    {
-      "code": "022720",
-      "name": "广发中证国新港股通央企红利ETF发起式联接C",
-      "daily_return": 0.57,
-      "week_1": -0.21,
-      "month_1": -2.17,
-      "month_3": 4.03,
-      "month_6": -7.75,
-      "year_1": 2.17,
-      "ytd": -0.86,
-      "fee": "0.00%"
     },
     {
       "code": "021143",
@@ -253,54 +253,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "021583",
-      "name": "中欧中证港股通央企红利指数发起(QDII)A",
-      "daily_return": 0.56,
-      "week_1": -0.44,
-      "month_1": -0.17,
-      "month_3": 6.9,
-      "month_6": -2.49,
-      "year_1": 1.13,
-      "ytd": -0.44,
-      "fee": "0.12%"
-    },
-    {
-      "code": "021142",
-      "name": "华夏港股通央企红利ETF联接A",
-      "daily_return": 0.56,
-      "week_1": -0.48,
-      "month_1": -0.29,
-      "month_3": 6.75,
-      "month_6": -2.91,
-      "year_1": 1.18,
-      "ytd": -0.63,
-      "fee": "0.12%"
-    },
-    {
-      "code": "022151",
-      "name": "国投瑞银中证港股通央企红利指数发起式A",
-      "daily_return": 0.56,
-      "week_1": -0.39,
-      "month_1": -0.06,
-      "month_3": 7.01,
-      "month_6": -2.35,
-      "year_1": 1.86,
-      "ytd": -0.11,
-      "fee": "0.60%"
-    },
-    {
-      "code": "023572",
-      "name": "万家中证港股通央企红利ETF联接A",
-      "daily_return": 0.56,
-      "week_1": -0.49,
-      "month_1": -0.28,
-      "month_3": 6.39,
-      "month_6": -3.72,
-      "year_1": 0.09,
-      "ytd": -1.56,
-      "fee": "0.10%"
-    },
-    {
       "code": "023535",
       "name": "永赢中证港股通央企红利ETF联接C",
       "daily_return": 0.56,
@@ -310,18 +262,6 @@ const FUND_DATA_CAT2 = {
       "month_6": -3.21,
       "year_1": 0.38,
       "ytd": -1.29,
-      "fee": "0.00%"
-    },
-    {
-      "code": "024372",
-      "name": "天弘中证港股通央企红利ETF联接C",
-      "daily_return": 0.56,
-      "week_1": -0.51,
-      "month_1": -0.3,
-      "month_3": 6.51,
-      "month_6": -3.32,
-      "year_1": null,
-      "ytd": -1.51,
       "fee": "0.00%"
     },
     {
@@ -337,6 +277,78 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
+      "code": "021142",
+      "name": "华夏港股通央企红利ETF联接A",
+      "daily_return": 0.56,
+      "week_1": -0.48,
+      "month_1": -0.29,
+      "month_3": 6.75,
+      "month_6": -2.91,
+      "year_1": 1.18,
+      "ytd": -0.63,
+      "fee": "0.12%"
+    },
+    {
+      "code": "021583",
+      "name": "中欧中证港股通央企红利指数发起(QDII)A",
+      "daily_return": 0.56,
+      "week_1": -0.44,
+      "month_1": -0.17,
+      "month_3": 6.9,
+      "month_6": -2.49,
+      "year_1": 1.13,
+      "ytd": -0.44,
+      "fee": "0.12%"
+    },
+    {
+      "code": "023572",
+      "name": "万家中证港股通央企红利ETF联接A",
+      "daily_return": 0.56,
+      "week_1": -0.49,
+      "month_1": -0.28,
+      "month_3": 6.39,
+      "month_6": -3.72,
+      "year_1": 0.09,
+      "ytd": -1.56,
+      "fee": "0.10%"
+    },
+    {
+      "code": "024372",
+      "name": "天弘中证港股通央企红利ETF联接C",
+      "daily_return": 0.56,
+      "week_1": -0.51,
+      "month_1": -0.3,
+      "month_3": 6.51,
+      "month_6": -3.32,
+      "year_1": null,
+      "ytd": -1.51,
+      "fee": "0.00%"
+    },
+    {
+      "code": "022151",
+      "name": "国投瑞银中证港股通央企红利指数发起式A",
+      "daily_return": 0.56,
+      "week_1": -0.39,
+      "month_1": -0.06,
+      "month_3": 7.01,
+      "month_6": -2.35,
+      "year_1": 1.86,
+      "ytd": -0.11,
+      "fee": "0.60%"
+    },
+    {
+      "code": "023534",
+      "name": "永赢中证港股通央企红利ETF联接A",
+      "daily_return": 0.55,
+      "week_1": -0.52,
+      "month_1": -0.3,
+      "month_3": 6.72,
+      "month_6": -3.09,
+      "year_1": 0.63,
+      "ytd": -1.1,
+      "fee": "0.12%"
+    },
+    {
       "code": "027551",
       "name": "银华标普港股通低波红利ETF联接A",
       "daily_return": 0.55,
@@ -347,18 +359,6 @@ const FUND_DATA_CAT2 = {
       "year_1": null,
       "ytd": null,
       "fee": "0.03%"
-    },
-    {
-      "code": "027552",
-      "name": "银华标普港股通低波红利ETF联接C",
-      "daily_return": 0.55,
-      "week_1": 0.29,
-      "month_1": -2.22,
-      "month_3": null,
-      "month_6": null,
-      "year_1": null,
-      "ytd": null,
-      "fee": "0.00%"
     }
   ],
   "QDII": [
@@ -905,18 +905,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "017351",
-      "name": "工银养老2040三年持有Y",
-      "daily_return": 0.25,
-      "week_1": 3.34,
-      "month_1": -0.2,
-      "month_3": -4.18,
-      "month_6": 3.08,
-      "year_1": 0.84,
-      "ytd": 1.4,
-      "fee": "0.00%"
-    },
-    {
       "code": "017251",
       "name": "工银养老2035三年持有Y",
       "daily_return": 0.25,
@@ -929,16 +917,16 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "007650",
-      "name": "工银养老2040三年持有A",
+      "code": "017351",
+      "name": "工银养老2040三年持有Y",
       "daily_return": 0.25,
-      "week_1": 3.33,
-      "month_1": -0.24,
-      "month_3": -4.3,
-      "month_6": 2.83,
-      "year_1": 0.35,
-      "ytd": 1.05,
-      "fee": "0.12%"
+      "week_1": 3.34,
+      "month_1": -0.2,
+      "month_3": -4.18,
+      "month_6": 3.08,
+      "year_1": 0.84,
+      "ytd": 1.4,
+      "fee": "0.00%"
     },
     {
       "code": "016170",
@@ -950,6 +938,18 @@ const FUND_DATA_CAT2 = {
       "month_6": 0.53,
       "year_1": -1.12,
       "ytd": -0.87,
+      "fee": "0.12%"
+    },
+    {
+      "code": "007650",
+      "name": "工银养老2040三年持有A",
+      "daily_return": 0.25,
+      "week_1": 3.33,
+      "month_1": -0.24,
+      "month_3": -4.3,
+      "month_6": 2.83,
+      "year_1": 0.35,
+      "ytd": 1.05,
       "fee": "0.12%"
     },
     {
@@ -1073,16 +1073,16 @@ const FUND_DATA_CAT2 = {
       "fee": "0.10%"
     },
     {
-      "code": "024522",
-      "name": "财通聚元平衡3个月持有期混合发起(FOF)C",
+      "code": "024810",
+      "name": "华夏财富优选一年持有混合(FOF)A",
       "daily_return": 0.18,
-      "week_1": 0.44,
-      "month_1": 0.3,
-      "month_3": -0.9,
-      "month_6": 3.55,
-      "year_1": null,
-      "ytd": 0.82,
-      "fee": "0.00%"
+      "week_1": 4.97,
+      "month_1": 1.39,
+      "month_3": -13.52,
+      "month_6": 14.71,
+      "year_1": 22.53,
+      "ytd": 20.76,
+      "fee": "0.10%"
     }
   ]
 };
