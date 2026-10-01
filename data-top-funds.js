@@ -1,23 +1,6 @@
 const FUND_DATA_TOP = {
   "top_funds": [
     {
-      "code": "015140",
-      "name": "泰康医疗健康股票发起C",
-      "date": "2026-09-30",
-      "nav": 0.9475,
-      "acc_nav": 0.9475,
-      "daily_return": 6.56,
-      "week_1": 1.05,
-      "month_1": 10.9,
-      "month_3": 10.39,
-      "month_6": 10.59,
-      "year_1": -9.34,
-      "ytd": 6.23,
-      "since_inception": -5.25,
-      "fee": "0.00%",
-      "type": "股票型"
-    },
-    {
       "code": "015139",
       "name": "泰康医疗健康股票发起A",
       "date": "2026-09-30",
@@ -35,21 +18,21 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
-      "code": "024633",
-      "name": "中欧消费精选混合发起C",
+      "code": "015140",
+      "name": "泰康医疗健康股票发起C",
       "date": "2026-09-30",
-      "nav": 0.9089,
-      "acc_nav": 0.9089,
-      "daily_return": 6.35,
-      "week_1": 1.91,
-      "month_1": 11.32,
-      "month_3": 14.86,
-      "month_6": 3.13,
-      "year_1": -18.98,
-      "ytd": -7.65,
-      "since_inception": -9.11,
+      "nav": 0.9475,
+      "acc_nav": 0.9475,
+      "daily_return": 6.56,
+      "week_1": 1.05,
+      "month_1": 10.9,
+      "month_3": 10.39,
+      "month_6": 10.59,
+      "year_1": -9.34,
+      "ytd": 6.23,
+      "since_inception": -5.25,
       "fee": "0.00%",
-      "type": "混合型"
+      "type": "股票型"
     },
     {
       "code": "024632",
@@ -66,6 +49,23 @@ const FUND_DATA_TOP = {
       "ytd": -7.24,
       "since_inception": -8.44,
       "fee": "0.15%",
+      "type": "混合型"
+    },
+    {
+      "code": "024633",
+      "name": "中欧消费精选混合发起C",
+      "date": "2026-09-30",
+      "nav": 0.9089,
+      "acc_nav": 0.9089,
+      "daily_return": 6.35,
+      "week_1": 1.91,
+      "month_1": 11.32,
+      "month_3": 14.86,
+      "month_6": 3.13,
+      "year_1": -18.98,
+      "ytd": -7.65,
+      "since_inception": -9.11,
+      "fee": "0.00%",
       "type": "混合型"
     },
     {
@@ -239,23 +239,6 @@ const FUND_DATA_TOP = {
       "type": "混合型"
     },
     {
-      "code": "014842",
-      "name": "东方阿尔法医疗健康混合发起C",
-      "date": "2026-09-30",
-      "nav": 1.2857,
-      "acc_nav": 1.2857,
-      "daily_return": 5.11,
-      "week_1": 1.56,
-      "month_1": 21.28,
-      "month_3": 30.42,
-      "month_6": 17.98,
-      "year_1": 1.3,
-      "ytd": 19.66,
-      "since_inception": 28.57,
-      "fee": "0.00%",
-      "type": "混合型"
-    },
-    {
       "code": "014841",
       "name": "东方阿尔法医疗健康混合发起A",
       "date": "2026-09-30",
@@ -270,6 +253,23 @@ const FUND_DATA_TOP = {
       "ytd": 20.16,
       "since_inception": 31.54,
       "fee": "0.15%",
+      "type": "混合型"
+    },
+    {
+      "code": "014842",
+      "name": "东方阿尔法医疗健康混合发起C",
+      "date": "2026-09-30",
+      "nav": 1.2857,
+      "acc_nav": 1.2857,
+      "daily_return": 5.11,
+      "week_1": 1.56,
+      "month_1": 21.28,
+      "month_3": 30.42,
+      "month_6": 17.98,
+      "year_1": 1.3,
+      "ytd": 19.66,
+      "since_inception": 28.57,
+      "fee": "0.00%",
       "type": "混合型"
     },
     {
@@ -307,23 +307,6 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
-      "code": "011948",
-      "name": "东吴智慧医疗量化混合C",
-      "date": "2026-09-30",
-      "nav": 0.9001,
-      "acc_nav": 0.9001,
-      "daily_return": 5.05,
-      "week_1": -1.21,
-      "month_1": 8.09,
-      "month_3": 2.67,
-      "month_6": 15.07,
-      "year_1": -7.4,
-      "ytd": 15.56,
-      "since_inception": -33.88,
-      "fee": "0.00%",
-      "type": "混合型"
-    },
-    {
       "code": "013941",
       "name": "东吴医疗服务股票C",
       "date": "2026-09-30",
@@ -339,6 +322,23 @@ const FUND_DATA_TOP = {
       "since_inception": -26.6,
       "fee": "0.00%",
       "type": "股票型"
+    },
+    {
+      "code": "011948",
+      "name": "东吴智慧医疗量化混合C",
+      "date": "2026-09-30",
+      "nav": 0.9001,
+      "acc_nav": 0.9001,
+      "daily_return": 5.05,
+      "week_1": -1.21,
+      "month_1": 8.09,
+      "month_3": 2.67,
+      "month_6": 15.07,
+      "year_1": -7.4,
+      "ytd": 15.56,
+      "since_inception": -33.88,
+      "fee": "0.00%",
+      "type": "混合型"
     },
     {
       "code": "017480",
@@ -375,23 +375,6 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
-      "code": "011373",
-      "name": "招商前沿医疗保健股票A",
-      "date": "2026-09-30",
-      "nav": 0.9362,
-      "acc_nav": 0.9362,
-      "daily_return": 4.85,
-      "week_1": 0.35,
-      "month_1": 16.66,
-      "month_3": 46.6,
-      "month_6": 57.08,
-      "year_1": 33.61,
-      "ytd": 61.78,
-      "since_inception": -6.38,
-      "fee": "0.15%",
-      "type": "股票型"
-    },
-    {
       "code": "011374",
       "name": "招商前沿医疗保健股票C",
       "date": "2026-09-30",
@@ -406,6 +389,23 @@ const FUND_DATA_TOP = {
       "ytd": 60.86,
       "since_inception": -10.21,
       "fee": "0.00%",
+      "type": "股票型"
+    },
+    {
+      "code": "011373",
+      "name": "招商前沿医疗保健股票A",
+      "date": "2026-09-30",
+      "nav": 0.9362,
+      "acc_nav": 0.9362,
+      "daily_return": 4.85,
+      "week_1": 0.35,
+      "month_1": 16.66,
+      "month_3": 46.6,
+      "month_6": 57.08,
+      "year_1": 33.61,
+      "ytd": 61.78,
+      "since_inception": -6.38,
+      "fee": "0.15%",
       "type": "股票型"
     },
     {
@@ -511,23 +511,6 @@ const FUND_DATA_TOP = {
       "type": "混合型"
     },
     {
-      "code": "013483",
-      "name": "华安医疗创新混合C",
-      "date": "2026-09-30",
-      "nav": 1.3061,
-      "acc_nav": 1.3061,
-      "daily_return": 4.69,
-      "week_1": 0.47,
-      "month_1": 6.07,
-      "month_3": 16.76,
-      "month_6": 18.17,
-      "year_1": -2.52,
-      "ytd": 19.43,
-      "since_inception": -10.51,
-      "fee": "0.00%",
-      "type": "混合型"
-    },
-    {
       "code": "008359",
       "name": "华安医疗创新混合A",
       "date": "2026-09-30",
@@ -542,6 +525,23 @@ const FUND_DATA_TOP = {
       "ytd": 19.95,
       "since_inception": 34.55,
       "fee": "0.15%",
+      "type": "混合型"
+    },
+    {
+      "code": "013483",
+      "name": "华安医疗创新混合C",
+      "date": "2026-09-30",
+      "nav": 1.3061,
+      "acc_nav": 1.3061,
+      "daily_return": 4.69,
+      "week_1": 0.47,
+      "month_1": 6.07,
+      "month_3": 16.76,
+      "month_6": 18.17,
+      "year_1": -2.52,
+      "ytd": 19.43,
+      "since_inception": -10.51,
+      "fee": "0.00%",
       "type": "混合型"
     },
     {
@@ -681,23 +681,6 @@ const FUND_DATA_TOP = {
       "type": "其他"
     },
     {
-      "code": "009805",
-      "name": "国泰医药健康股票A",
-      "date": "2026-09-30",
-      "nav": 1.0947,
-      "acc_nav": 1.0947,
-      "daily_return": 4.44,
-      "week_1": 0.27,
-      "month_1": 10.19,
-      "month_3": 21.31,
-      "month_6": 23.29,
-      "year_1": 23.68,
-      "ytd": 37.34,
-      "since_inception": 9.47,
-      "fee": "0.15%",
-      "type": "股票型"
-    },
-    {
       "code": "011326",
       "name": "国泰医药健康股票C",
       "date": "2026-09-30",
@@ -712,6 +695,23 @@ const FUND_DATA_TOP = {
       "ytd": 36.88,
       "since_inception": 7.03,
       "fee": "0.00%",
+      "type": "股票型"
+    },
+    {
+      "code": "009805",
+      "name": "国泰医药健康股票A",
+      "date": "2026-09-30",
+      "nav": 1.0947,
+      "acc_nav": 1.0947,
+      "daily_return": 4.44,
+      "week_1": 0.27,
+      "month_1": 10.19,
+      "month_3": 21.31,
+      "month_6": 23.29,
+      "year_1": 23.68,
+      "ytd": 37.34,
+      "since_inception": 9.47,
+      "fee": "0.15%",
       "type": "股票型"
     },
     {
@@ -766,23 +766,6 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
-      "code": "013073",
-      "name": "泰信医疗服务混合发起式C",
-      "date": "2026-09-30",
-      "nav": 1.1543,
-      "acc_nav": 1.1543,
-      "daily_return": 4.36,
-      "week_1": -2.77,
-      "month_1": 5.56,
-      "month_3": 7.64,
-      "month_6": 8.97,
-      "year_1": -8.61,
-      "ytd": 8.2,
-      "since_inception": 15.43,
-      "fee": "0.00%",
-      "type": "混合型"
-    },
-    {
       "code": "013072",
       "name": "泰信医疗服务混合发起式A",
       "date": "2026-09-30",
@@ -797,6 +780,23 @@ const FUND_DATA_TOP = {
       "ytd": 8.61,
       "since_inception": 18.17,
       "fee": "0.15%",
+      "type": "混合型"
+    },
+    {
+      "code": "013073",
+      "name": "泰信医疗服务混合发起式C",
+      "date": "2026-09-30",
+      "nav": 1.1543,
+      "acc_nav": 1.1543,
+      "daily_return": 4.36,
+      "week_1": -2.77,
+      "month_1": 5.56,
+      "month_3": 7.64,
+      "month_6": 8.97,
+      "year_1": -8.61,
+      "ytd": 8.2,
+      "since_inception": 15.43,
+      "fee": "0.00%",
       "type": "混合型"
     },
     {

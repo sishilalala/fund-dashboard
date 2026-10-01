@@ -25,30 +25,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "023482",
-      "name": "万家中证港股通创新药ETF发起式联接C",
-      "daily_return": 3.77,
-      "week_1": 2.12,
-      "month_1": 6.94,
-      "month_3": 30.8,
-      "month_6": 15.34,
-      "year_1": -7.77,
-      "ytd": 16.47,
-      "fee": "0.00%"
-    },
-    {
-      "code": "023481",
-      "name": "万家中证港股通创新药ETF发起式联接A",
-      "daily_return": 3.77,
-      "week_1": 2.12,
-      "month_1": 6.96,
-      "month_3": 30.86,
-      "month_6": 15.46,
-      "year_1": -7.84,
-      "ytd": 16.63,
-      "fee": "0.10%"
-    },
-    {
       "code": "021760",
       "name": "中欧中证港股通创新药指数发起C",
       "daily_return": 3.77,
@@ -71,6 +47,30 @@ const FUND_DATA_CAT2 = {
       "year_1": -7.58,
       "ytd": 16.79,
       "fee": "0.10%"
+    },
+    {
+      "code": "023481",
+      "name": "万家中证港股通创新药ETF发起式联接A",
+      "daily_return": 3.77,
+      "week_1": 2.12,
+      "month_1": 6.96,
+      "month_3": 30.86,
+      "month_6": 15.46,
+      "year_1": -7.84,
+      "ytd": 16.63,
+      "fee": "0.10%"
+    },
+    {
+      "code": "023482",
+      "name": "万家中证港股通创新药ETF发起式联接C",
+      "daily_return": 3.77,
+      "week_1": 2.12,
+      "month_1": 6.94,
+      "month_3": 30.8,
+      "month_6": 15.34,
+      "year_1": -7.77,
+      "ytd": 16.47,
+      "fee": "0.00%"
     },
     {
       "code": "019670",
@@ -121,18 +121,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.12%"
     },
     {
-      "code": "023597",
-      "name": "景顺长城中证港股通创新药ETF联接A",
-      "daily_return": 3.72,
-      "week_1": 2.08,
-      "month_1": 6.79,
-      "month_3": 30.14,
-      "month_6": 14.86,
-      "year_1": -7.39,
-      "ytd": 16.43,
-      "fee": "0.10%"
-    },
-    {
       "code": "023598",
       "name": "景顺长城中证港股通创新药ETF联接C",
       "daily_return": 3.72,
@@ -143,6 +131,18 @@ const FUND_DATA_CAT2 = {
       "year_1": -7.58,
       "ytd": 16.26,
       "fee": "0.00%"
+    },
+    {
+      "code": "023597",
+      "name": "景顺长城中证港股通创新药ETF联接A",
+      "daily_return": 3.72,
+      "week_1": 2.08,
+      "month_1": 6.79,
+      "month_3": 30.14,
+      "month_6": 14.86,
+      "year_1": -7.39,
+      "ytd": 16.43,
+      "fee": "0.10%"
     },
     {
       "code": "024407",
@@ -217,28 +217,16 @@ const FUND_DATA_CAT2 = {
       "fee": "0.12%"
     },
     {
-      "code": "021281",
-      "name": "富国国证疫苗与生物科技ETF发起式联接C",
+      "code": "027356",
+      "name": "天弘恒生生物科技指数C",
       "daily_return": 3.61,
-      "week_1": 1.72,
-      "month_1": 3.28,
-      "month_3": 11.64,
-      "month_6": 0.46,
-      "year_1": -13.86,
-      "ytd": -2.11,
+      "week_1": 1.89,
+      "month_1": 6.53,
+      "month_3": null,
+      "month_6": null,
+      "year_1": null,
+      "ytd": null,
       "fee": "0.00%"
-    },
-    {
-      "code": "021292",
-      "name": "鹏华国证疫苗与生物科技ETF发起式联接A",
-      "daily_return": 3.61,
-      "week_1": 1.73,
-      "month_1": 3.21,
-      "month_3": 11.11,
-      "month_6": 0.07,
-      "year_1": -14.22,
-      "ytd": -2.51,
-      "fee": "0.10%"
     },
     {
       "code": "027355",
@@ -253,15 +241,27 @@ const FUND_DATA_CAT2 = {
       "fee": "0.03%"
     },
     {
-      "code": "027356",
-      "name": "天弘恒生生物科技指数C",
+      "code": "021292",
+      "name": "鹏华国证疫苗与生物科技ETF发起式联接A",
       "daily_return": 3.61,
-      "week_1": 1.89,
-      "month_1": 6.53,
-      "month_3": null,
-      "month_6": null,
-      "year_1": null,
-      "ytd": null,
+      "week_1": 1.73,
+      "month_1": 3.21,
+      "month_3": 11.11,
+      "month_6": 0.07,
+      "year_1": -14.22,
+      "ytd": -2.51,
+      "fee": "0.10%"
+    },
+    {
+      "code": "021281",
+      "name": "富国国证疫苗与生物科技ETF发起式联接C",
+      "daily_return": 3.61,
+      "week_1": 1.72,
+      "month_1": 3.28,
+      "month_3": 11.64,
+      "month_6": 0.46,
+      "year_1": -13.86,
+      "ytd": -2.11,
       "fee": "0.00%"
     },
     {
@@ -289,18 +289,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.12%"
     },
     {
-      "code": "014564",
-      "name": "天弘创新药精选50ETF联接A",
-      "daily_return": 3.57,
-      "week_1": 1.01,
-      "month_1": 5.48,
-      "month_3": 22.81,
-      "month_6": 21.28,
-      "year_1": 2.89,
-      "ytd": 22.12,
-      "fee": "0.10%"
-    },
-    {
       "code": "014565",
       "name": "天弘创新药精选50ETF联接C",
       "daily_return": 3.57,
@@ -313,16 +301,16 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "017186",
-      "name": "国泰疫苗与生物科技ETF联接C",
-      "daily_return": 3.56,
-      "week_1": 1.68,
-      "month_1": 3.28,
-      "month_3": 11.77,
-      "month_6": 1.87,
-      "year_1": -9.95,
-      "ytd": -1.22,
-      "fee": "0.00%"
+      "code": "014564",
+      "name": "天弘创新药精选50ETF联接A",
+      "daily_return": 3.57,
+      "week_1": 1.01,
+      "month_1": 5.48,
+      "month_3": 22.81,
+      "month_6": 21.28,
+      "year_1": 2.89,
+      "ytd": 22.12,
+      "fee": "0.10%"
     },
     {
       "code": "017185",
@@ -335,6 +323,18 @@ const FUND_DATA_CAT2 = {
       "year_1": -9.78,
       "ytd": -1.08,
       "fee": "0.10%"
+    },
+    {
+      "code": "017186",
+      "name": "国泰疫苗与生物科技ETF联接C",
+      "daily_return": 3.56,
+      "week_1": 1.68,
+      "month_1": 3.28,
+      "month_3": 11.77,
+      "month_6": 1.87,
+      "year_1": -9.95,
+      "ytd": -1.22,
+      "fee": "0.00%"
     },
     {
       "code": "012417",
@@ -725,6 +725,18 @@ const FUND_DATA_CAT2 = {
   ],
   "FOF": [
     {
+      "code": "014197",
+      "name": "国泰行业轮动股票(FOF-LOF)C",
+      "daily_return": 1.25,
+      "week_1": -5.77,
+      "month_1": -14.54,
+      "month_3": -22.4,
+      "month_6": -35.32,
+      "year_1": -36.56,
+      "ytd": -31.04,
+      "fee": "0.00%"
+    },
+    {
       "code": "501220",
       "name": "国泰行业轮动股票(FOF-LOF)A",
       "daily_return": 1.25,
@@ -737,15 +749,15 @@ const FUND_DATA_CAT2 = {
       "fee": "0.10%"
     },
     {
-      "code": "014197",
-      "name": "国泰行业轮动股票(FOF-LOF)C",
-      "daily_return": 1.25,
-      "week_1": -5.77,
-      "month_1": -14.54,
-      "month_3": -22.4,
-      "month_6": -35.32,
-      "year_1": -36.56,
-      "ytd": -31.04,
+      "code": "020847",
+      "name": "人保泰睿积极配置三个月持有混合发起式(FOF)C",
+      "daily_return": 0.8,
+      "week_1": -5.47,
+      "month_1": -5.36,
+      "month_3": -22.06,
+      "month_6": -3.88,
+      "year_1": -2.37,
+      "ytd": -3.25,
       "fee": "0.00%"
     },
     {
@@ -759,18 +771,6 @@ const FUND_DATA_CAT2 = {
       "year_1": -1.97,
       "ytd": -2.97,
       "fee": "0.12%"
-    },
-    {
-      "code": "020847",
-      "name": "人保泰睿积极配置三个月持有混合发起式(FOF)C",
-      "daily_return": 0.8,
-      "week_1": -5.47,
-      "month_1": -5.36,
-      "month_3": -22.06,
-      "month_6": -3.88,
-      "year_1": -2.37,
-      "ytd": -3.25,
-      "fee": "0.00%"
     },
     {
       "code": "890008",
@@ -845,18 +845,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "014027",
-      "name": "易方达优选星汇六个月持有混合(FOF)C",
-      "daily_return": 0.51,
-      "week_1": -3.53,
-      "month_1": -3.34,
-      "month_3": -14.61,
-      "month_6": 16.58,
-      "year_1": 18.62,
-      "ytd": 17.64,
-      "fee": "0.00%"
-    },
-    {
       "code": "014026",
       "name": "易方达优选星汇六个月持有混合(FOF)A",
       "daily_return": 0.51,
@@ -869,16 +857,16 @@ const FUND_DATA_CAT2 = {
       "fee": "0.12%"
     },
     {
-      "code": "012936",
-      "name": "民生加银积极配置6个月持有混合(FOF)",
-      "daily_return": 0.5,
-      "week_1": -4.67,
-      "month_1": -4.95,
-      "month_3": -16.75,
-      "month_6": 4.5,
-      "year_1": 4.1,
-      "ytd": 3.64,
-      "fee": "0.06%"
+      "code": "014027",
+      "name": "易方达优选星汇六个月持有混合(FOF)C",
+      "daily_return": 0.51,
+      "week_1": -3.53,
+      "month_1": -3.34,
+      "month_3": -14.61,
+      "month_6": 16.58,
+      "year_1": 18.62,
+      "ytd": 17.64,
+      "fee": "0.00%"
     },
     {
       "code": "012639",
@@ -903,6 +891,18 @@ const FUND_DATA_CAT2 = {
       "year_1": 2.15,
       "ytd": 3.25,
       "fee": "0.10%"
+    },
+    {
+      "code": "012936",
+      "name": "民生加银积极配置6个月持有混合(FOF)",
+      "daily_return": 0.5,
+      "week_1": -4.67,
+      "month_1": -4.95,
+      "month_3": -16.75,
+      "month_6": 4.5,
+      "year_1": 4.1,
+      "ytd": 3.64,
+      "fee": "0.06%"
     },
     {
       "code": "005809",
@@ -989,30 +989,6 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "013954",
-      "name": "广发积极优势混合(FOF-LOF)C",
-      "daily_return": 0.4,
-      "week_1": -4.07,
-      "month_1": -6.09,
-      "month_3": -6.46,
-      "month_6": -3.21,
-      "year_1": -1.65,
-      "ytd": -0.75,
-      "fee": "0.00%"
-    },
-    {
-      "code": "015090",
-      "name": "易方达优势长兴三个月持有混合(FOF)A",
-      "daily_return": 0.4,
-      "week_1": -5.05,
-      "month_1": -4.83,
-      "month_3": -19.02,
-      "month_6": 5.49,
-      "year_1": 0.47,
-      "ytd": 3.45,
-      "fee": "0.12%"
-    },
-    {
       "code": "015091",
       "name": "易方达优势长兴三个月持有混合(FOF)C",
       "daily_return": 0.4,
@@ -1037,6 +1013,30 @@ const FUND_DATA_CAT2 = {
       "fee": "0.15%"
     },
     {
+      "code": "013954",
+      "name": "广发积极优势混合(FOF-LOF)C",
+      "daily_return": 0.4,
+      "week_1": -4.07,
+      "month_1": -6.09,
+      "month_3": -6.46,
+      "month_6": -3.21,
+      "year_1": -1.65,
+      "ytd": -0.75,
+      "fee": "0.00%"
+    },
+    {
+      "code": "015090",
+      "name": "易方达优势长兴三个月持有混合(FOF)A",
+      "daily_return": 0.4,
+      "week_1": -5.05,
+      "month_1": -4.83,
+      "month_3": -19.02,
+      "month_6": 5.49,
+      "year_1": 0.47,
+      "ytd": 3.45,
+      "fee": "0.12%"
+    },
+    {
       "code": "016738",
       "name": "嘉实领航聚优积极配置6个月持有混合(FOF)C",
       "daily_return": 0.39,
@@ -1049,16 +1049,28 @@ const FUND_DATA_CAT2 = {
       "fee": "0.00%"
     },
     {
-      "code": "501218",
-      "name": "工银睿智进取股票(FOF-LOF)A",
+      "code": "005926",
+      "name": "建信福泽裕泰混合(FOF)C",
       "daily_return": 0.39,
-      "week_1": -4.46,
-      "month_1": -8.34,
-      "month_3": -18.11,
-      "month_6": -6.99,
-      "year_1": -17.85,
-      "ytd": -13.1,
-      "fee": "0.10%"
+      "week_1": -5.05,
+      "month_1": -4.07,
+      "month_3": -10.53,
+      "month_6": -1.59,
+      "year_1": -3.37,
+      "ytd": -1.87,
+      "fee": "0.00%"
+    },
+    {
+      "code": "016737",
+      "name": "嘉实领航聚优积极配置6个月持有混合(FOF)A",
+      "daily_return": 0.39,
+      "week_1": -4.44,
+      "month_1": -4.47,
+      "month_3": -16.64,
+      "month_6": 1.19,
+      "year_1": 0.24,
+      "ytd": 1.46,
+      "fee": "0.12%"
     },
     {
       "code": "005925",
@@ -1071,18 +1083,6 @@ const FUND_DATA_CAT2 = {
       "year_1": -2.98,
       "ytd": -1.57,
       "fee": "0.12%"
-    },
-    {
-      "code": "005926",
-      "name": "建信福泽裕泰混合(FOF)C",
-      "daily_return": 0.39,
-      "week_1": -5.05,
-      "month_1": -4.07,
-      "month_3": -10.53,
-      "month_6": -1.59,
-      "year_1": -3.37,
-      "ytd": -1.87,
-      "fee": "0.00%"
     }
   ]
 };

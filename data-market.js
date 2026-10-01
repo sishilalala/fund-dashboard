@@ -518,10 +518,10 @@ const FUND_DATA_MARKET = {
     },
     {
       "name": "次新股",
-      "stock_count": 162,
-      "change_pct": -1.67,
-      "volume": 711317757,
-      "amount": 42769959344,
+      "stock_count": 160,
+      "change_pct": -1.68,
+      "volume": 706944425,
+      "amount": 42411453258,
       "leader_name": "泰诺麦博",
       "leader_change_pct": 19.99
     },

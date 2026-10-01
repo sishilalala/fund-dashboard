@@ -181,18 +181,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.15%"
     },
     {
-      "code": "006229",
-      "name": "中欧医疗创新股票C",
-      "daily_return": 4.34,
-      "week_1": 1.39,
-      "month_1": 10.45,
-      "month_3": 23.78,
-      "month_6": 23.97,
-      "year_1": -0.67,
-      "ytd": 24.18,
-      "fee": "0.00%"
-    },
-    {
       "code": "006228",
       "name": "中欧医疗创新股票A",
       "daily_return": 4.34,
@@ -203,6 +191,18 @@ const FUND_DATA_CAT1 = {
       "year_1": 0.11,
       "ytd": 24.92,
       "fee": "0.15%"
+    },
+    {
+      "code": "006229",
+      "name": "中欧医疗创新股票C",
+      "daily_return": 4.34,
+      "week_1": 1.39,
+      "month_1": 10.45,
+      "month_3": 23.78,
+      "month_6": 23.97,
+      "year_1": -0.67,
+      "ytd": 24.18,
+      "fee": "0.00%"
     },
     {
       "code": "000711",
@@ -253,18 +253,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.15%"
     },
     {
-      "code": "026154",
-      "name": "红土创新医疗保健股票C",
-      "daily_return": 3.96,
-      "week_1": -1.93,
-      "month_1": 11.58,
-      "month_3": 3.13,
-      "month_6": 17.17,
-      "year_1": null,
-      "ytd": 24.91,
-      "fee": "0.00%"
-    },
-    {
       "code": "010434",
       "name": "红土创新医疗保健股票A",
       "daily_return": 3.96,
@@ -275,6 +263,18 @@ const FUND_DATA_CAT1 = {
       "year_1": 6.53,
       "ytd": 25.28,
       "fee": "0.15%"
+    },
+    {
+      "code": "026154",
+      "name": "红土创新医疗保健股票C",
+      "daily_return": 3.96,
+      "week_1": -1.93,
+      "month_1": 11.58,
+      "month_3": 3.13,
+      "month_6": 17.17,
+      "year_1": null,
+      "ytd": 24.91,
+      "fee": "0.00%"
     },
     {
       "code": "008107",
@@ -301,18 +301,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.15%"
     },
     {
-      "code": "005303",
-      "name": "嘉实医药健康股票A",
-      "daily_return": 3.89,
-      "week_1": -1.1,
-      "month_1": 7.14,
-      "month_3": 23.86,
-      "month_6": 26.25,
-      "year_1": 8.49,
-      "ytd": 28.18,
-      "fee": "0.15%"
-    },
-    {
       "code": "012046",
       "name": "大成医药健康股票C",
       "daily_return": 3.89,
@@ -325,16 +313,16 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "020143",
-      "name": "路博迈中国医疗健康股票发起C",
-      "daily_return": 3.88,
-      "week_1": -1.51,
-      "month_1": -1.31,
-      "month_3": 10.43,
-      "month_6": -6.53,
-      "year_1": -22.96,
-      "ytd": -5.21,
-      "fee": "0.00%"
+      "code": "005303",
+      "name": "嘉实医药健康股票A",
+      "daily_return": 3.89,
+      "week_1": -1.1,
+      "month_1": 7.14,
+      "month_3": 23.86,
+      "month_6": 26.25,
+      "year_1": 8.49,
+      "ytd": 28.18,
+      "fee": "0.15%"
     },
     {
       "code": "005304",
@@ -359,21 +347,21 @@ const FUND_DATA_CAT1 = {
       "year_1": -22.45,
       "ytd": -4.72,
       "fee": "0.15%"
+    },
+    {
+      "code": "020143",
+      "name": "路博迈中国医疗健康股票发起C",
+      "daily_return": 3.88,
+      "week_1": -1.51,
+      "month_1": -1.31,
+      "month_3": 10.43,
+      "month_6": -6.53,
+      "year_1": -22.96,
+      "ytd": -5.21,
+      "fee": "0.00%"
     }
   ],
   "混合型": [
-    {
-      "code": "024633",
-      "name": "中欧消费精选混合发起C",
-      "daily_return": 6.35,
-      "week_1": 1.91,
-      "month_1": 11.32,
-      "month_3": 14.86,
-      "month_6": 3.13,
-      "year_1": -18.98,
-      "ytd": -7.65,
-      "fee": "0.00%"
-    },
     {
       "code": "024632",
       "name": "中欧消费精选混合发起A",
@@ -385,6 +373,18 @@ const FUND_DATA_CAT1 = {
       "year_1": -18.5,
       "ytd": -7.24,
       "fee": "0.15%"
+    },
+    {
+      "code": "024633",
+      "name": "中欧消费精选混合发起C",
+      "daily_return": 6.35,
+      "week_1": 1.91,
+      "month_1": 11.32,
+      "month_3": 14.86,
+      "month_6": 3.13,
+      "year_1": -18.98,
+      "ytd": -7.65,
+      "fee": "0.00%"
     },
     {
       "code": "022276",
@@ -483,18 +483,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.15%"
     },
     {
-      "code": "019783",
-      "name": "华安健康主题混合A",
-      "daily_return": 5.13,
-      "week_1": 0.62,
-      "month_1": 6.9,
-      "month_3": 18.16,
-      "month_6": 17.45,
-      "year_1": -2.89,
-      "ytd": 18.02,
-      "fee": "0.15%"
-    },
-    {
       "code": "019784",
       "name": "华安健康主题混合C",
       "daily_return": 5.13,
@@ -507,16 +495,16 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "014842",
-      "name": "东方阿尔法医疗健康混合发起C",
-      "daily_return": 5.11,
-      "week_1": 1.56,
-      "month_1": 21.28,
-      "month_3": 30.42,
-      "month_6": 17.98,
-      "year_1": 1.3,
-      "ytd": 19.66,
-      "fee": "0.00%"
+      "code": "019783",
+      "name": "华安健康主题混合A",
+      "daily_return": 5.13,
+      "week_1": 0.62,
+      "month_1": 6.9,
+      "month_3": 18.16,
+      "month_6": 17.45,
+      "year_1": -2.89,
+      "ytd": 18.02,
+      "fee": "0.15%"
     },
     {
       "code": "014841",
@@ -529,6 +517,18 @@ const FUND_DATA_CAT1 = {
       "year_1": 1.84,
       "ytd": 20.16,
       "fee": "0.15%"
+    },
+    {
+      "code": "014842",
+      "name": "东方阿尔法医疗健康混合发起C",
+      "daily_return": 5.11,
+      "week_1": 1.56,
+      "month_1": 21.28,
+      "month_3": 30.42,
+      "month_6": 17.98,
+      "year_1": 1.3,
+      "ytd": 19.66,
+      "fee": "0.00%"
     },
     {
       "code": "002919",
@@ -555,18 +555,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "017962",
-      "name": "广发医药创新混合发起式A",
-      "daily_return": 4.73,
-      "week_1": 0.01,
-      "month_1": 15.88,
-      "month_3": 5.95,
-      "month_6": 9.93,
-      "year_1": -21.52,
-      "ytd": -4.32,
-      "fee": "0.15%"
-    },
-    {
       "code": "018364",
       "name": "银华医疗健康混合A",
       "daily_return": 4.73,
@@ -576,6 +564,18 @@ const FUND_DATA_CAT1 = {
       "month_6": 12.48,
       "year_1": -9.92,
       "ytd": 13.08,
+      "fee": "0.15%"
+    },
+    {
+      "code": "017962",
+      "name": "广发医药创新混合发起式A",
+      "daily_return": 4.73,
+      "week_1": 0.01,
+      "month_1": 15.88,
+      "month_3": 5.95,
+      "month_6": 9.93,
+      "year_1": -21.52,
+      "ytd": -4.32,
       "fee": "0.15%"
     },
     {
@@ -603,18 +603,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "008359",
-      "name": "华安医疗创新混合A",
-      "daily_return": 4.69,
-      "week_1": 0.48,
-      "month_1": 6.13,
-      "month_3": 16.94,
-      "month_6": 18.51,
-      "year_1": -1.95,
-      "ytd": 19.95,
-      "fee": "0.15%"
-    },
-    {
       "code": "013483",
       "name": "华安医疗创新混合C",
       "daily_return": 4.69,
@@ -625,6 +613,18 @@ const FUND_DATA_CAT1 = {
       "year_1": -2.52,
       "ytd": 19.43,
       "fee": "0.00%"
+    },
+    {
+      "code": "008359",
+      "name": "华安医疗创新混合A",
+      "daily_return": 4.69,
+      "week_1": 0.48,
+      "month_1": 6.13,
+      "month_3": 16.94,
+      "month_6": 18.51,
+      "year_1": -1.95,
+      "ytd": 19.95,
+      "fee": "0.15%"
     },
     {
       "code": "011002",
@@ -737,18 +737,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.08%"
     },
     {
-      "code": "000068",
-      "name": "民生加银转债优选C",
-      "daily_return": 0.71,
-      "week_1": 0.24,
-      "month_1": -2.77,
-      "month_3": -1.77,
-      "month_6": -5.64,
-      "year_1": -7.75,
-      "ytd": -7.8,
-      "fee": "0.00%"
-    },
-    {
       "code": "020020",
       "name": "国泰双利债券C",
       "daily_return": 0.71,
@@ -758,6 +746,18 @@ const FUND_DATA_CAT1 = {
       "month_6": 2.37,
       "year_1": 0.5,
       "ytd": 0.51,
+      "fee": "0.00%"
+    },
+    {
+      "code": "000068",
+      "name": "民生加银转债优选C",
+      "daily_return": 0.71,
+      "week_1": 0.24,
+      "month_1": -2.77,
+      "month_3": -1.77,
+      "month_6": -5.64,
+      "year_1": -7.75,
+      "ytd": -7.8,
       "fee": "0.00%"
     },
     {
@@ -773,18 +773,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.10%"
     },
     {
-      "code": "012740",
-      "name": "工银平衡回报6个月持有期债券A",
-      "daily_return": 0.66,
-      "week_1": 0.71,
-      "month_1": -0.17,
-      "month_3": 4.97,
-      "month_6": -3.02,
-      "year_1": -1.82,
-      "ytd": -2.61,
-      "fee": "0.08%"
-    },
-    {
       "code": "012741",
       "name": "工银平衡回报6个月持有期债券C",
       "daily_return": 0.66,
@@ -797,16 +785,16 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "040013",
-      "name": "华安强化收益债券B",
-      "daily_return": 0.64,
-      "week_1": 0.5,
-      "month_1": -1.62,
-      "month_3": -0.44,
-      "month_6": -4.2,
-      "year_1": -7.94,
-      "ytd": -6.19,
-      "fee": "0.00%"
+      "code": "012740",
+      "name": "工银平衡回报6个月持有期债券A",
+      "daily_return": 0.66,
+      "week_1": 0.71,
+      "month_1": -0.17,
+      "month_3": 4.97,
+      "month_6": -3.02,
+      "year_1": -1.82,
+      "ytd": -2.61,
+      "fee": "0.08%"
     },
     {
       "code": "040012",
@@ -819,6 +807,18 @@ const FUND_DATA_CAT1 = {
       "year_1": -7.57,
       "ytd": -5.91,
       "fee": "0.08%"
+    },
+    {
+      "code": "040013",
+      "name": "华安强化收益债券B",
+      "daily_return": 0.64,
+      "week_1": 0.5,
+      "month_1": -1.62,
+      "month_3": -0.44,
+      "month_6": -4.2,
+      "year_1": -7.94,
+      "ytd": -6.19,
+      "fee": "0.00%"
     },
     {
       "code": "015607",
@@ -845,18 +845,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.08%"
     },
     {
-      "code": "005945",
-      "name": "工银可转债优选债券A",
-      "daily_return": 0.6,
-      "week_1": -0.87,
-      "month_1": -4.75,
-      "month_3": -6.05,
-      "month_6": -2.07,
-      "year_1": -1.79,
-      "ytd": 1.39,
-      "fee": "0.08%"
-    },
-    {
       "code": "005946",
       "name": "工银可转债优选债券C",
       "daily_return": 0.6,
@@ -869,6 +857,18 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
+      "code": "005945",
+      "name": "工银可转债优选债券A",
+      "daily_return": 0.6,
+      "week_1": -0.87,
+      "month_1": -4.75,
+      "month_3": -6.05,
+      "month_6": -2.07,
+      "year_1": -1.79,
+      "ytd": 1.39,
+      "fee": "0.08%"
+    },
+    {
       "code": "573003",
       "name": "诺德增强收益债券",
       "daily_return": 0.52,
@@ -878,6 +878,18 @@ const FUND_DATA_CAT1 = {
       "month_6": -2.43,
       "year_1": -3.99,
       "ytd": -2.53,
+      "fee": "0.00%"
+    },
+    {
+      "code": "005284",
+      "name": "华商可转债债券C",
+      "daily_return": 0.52,
+      "week_1": 0.59,
+      "month_1": -1.94,
+      "month_3": -10.35,
+      "month_6": 31.96,
+      "year_1": 27.2,
+      "ytd": 25.92,
       "fee": "0.00%"
     },
     {
@@ -893,18 +905,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.08%"
     },
     {
-      "code": "005284",
-      "name": "华商可转债债券C",
-      "daily_return": 0.52,
-      "week_1": 0.59,
-      "month_1": -1.94,
-      "month_3": -10.35,
-      "month_6": 31.96,
-      "year_1": 27.2,
-      "ytd": 25.92,
-      "fee": "0.00%"
-    },
-    {
       "code": "025285",
       "name": "京管泰富京信债券A",
       "daily_return": 0.5,
@@ -914,18 +914,6 @@ const FUND_DATA_CAT1 = {
       "month_6": -1.29,
       "year_1": null,
       "ytd": -2.26,
-      "fee": "0.08%"
-    },
-    {
-      "code": "161624",
-      "name": "融通可转债债券A",
-      "daily_return": 0.5,
-      "week_1": 0.03,
-      "month_1": -3.24,
-      "month_3": -2.18,
-      "month_6": -4.23,
-      "year_1": -10.15,
-      "ytd": -8.32,
       "fee": "0.08%"
     },
     {
@@ -939,6 +927,18 @@ const FUND_DATA_CAT1 = {
       "year_1": null,
       "ytd": -2.48,
       "fee": "0.00%"
+    },
+    {
+      "code": "161624",
+      "name": "融通可转债债券A",
+      "daily_return": 0.5,
+      "week_1": 0.03,
+      "month_1": -3.24,
+      "month_3": -2.18,
+      "month_6": -4.23,
+      "year_1": -10.15,
+      "ytd": -8.32,
+      "fee": "0.08%"
     },
     {
       "code": "161625",
@@ -965,18 +965,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "022527",
-      "name": "天弘多元收益债券E",
-      "daily_return": 0.47,
-      "week_1": 0.41,
-      "month_1": -0.17,
-      "month_3": 3.16,
-      "month_6": 1.52,
-      "year_1": 6.42,
-      "ytd": 3.6,
-      "fee": "0.00%"
-    },
-    {
       "code": "010118",
       "name": "天弘多元收益债券A",
       "daily_return": 0.47,
@@ -987,6 +975,18 @@ const FUND_DATA_CAT1 = {
       "year_1": 6.79,
       "ytd": 3.86,
       "fee": "0.08%"
+    },
+    {
+      "code": "022527",
+      "name": "天弘多元收益债券E",
+      "daily_return": 0.47,
+      "week_1": 0.41,
+      "month_1": -0.17,
+      "month_3": 3.16,
+      "month_6": 1.52,
+      "year_1": 6.42,
+      "ytd": 3.6,
+      "fee": "0.00%"
     },
     {
       "code": "040023",
@@ -1049,18 +1049,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.08%"
     },
     {
-      "code": "002280",
-      "name": "华富安享债券A",
-      "daily_return": 0.39,
-      "week_1": -0.57,
-      "month_1": -2.37,
-      "month_3": -7.57,
-      "month_6": -8.46,
-      "year_1": -7.32,
-      "ytd": -7.02,
-      "fee": "0.08%"
-    },
-    {
       "code": "022760",
       "name": "华富安享债券C",
       "daily_return": 0.39,
@@ -1071,6 +1059,18 @@ const FUND_DATA_CAT1 = {
       "year_1": -7.59,
       "ytd": -7.23,
       "fee": "0.00%"
+    },
+    {
+      "code": "002280",
+      "name": "华富安享债券A",
+      "daily_return": 0.39,
+      "week_1": -0.57,
+      "month_1": -2.37,
+      "month_3": -7.57,
+      "month_6": -8.46,
+      "year_1": -7.32,
+      "ytd": -7.02,
+      "fee": "0.08%"
     },
     {
       "code": "003134",
