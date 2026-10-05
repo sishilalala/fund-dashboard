@@ -737,18 +737,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.08%"
     },
     {
-      "code": "020020",
-      "name": "国泰双利债券C",
-      "daily_return": 0.71,
-      "week_1": 0.15,
-      "month_1": -0.17,
-      "month_3": 6.74,
-      "month_6": 2.37,
-      "year_1": 0.5,
-      "ytd": 0.51,
-      "fee": "0.00%"
-    },
-    {
       "code": "000068",
       "name": "民生加银转债优选C",
       "daily_return": 0.71,
@@ -758,6 +746,18 @@ const FUND_DATA_CAT1 = {
       "month_6": -5.64,
       "year_1": -7.75,
       "ytd": -7.8,
+      "fee": "0.00%"
+    },
+    {
+      "code": "020020",
+      "name": "国泰双利债券C",
+      "daily_return": 0.71,
+      "week_1": 0.15,
+      "month_1": -0.17,
+      "month_3": 6.74,
+      "month_6": 2.37,
+      "year_1": 0.5,
+      "ytd": 0.51,
       "fee": "0.00%"
     },
     {
@@ -869,6 +869,18 @@ const FUND_DATA_CAT1 = {
       "fee": "0.08%"
     },
     {
+      "code": "005273",
+      "name": "华商可转债债券A",
+      "daily_return": 0.52,
+      "week_1": 0.6,
+      "month_1": -1.91,
+      "month_3": -10.26,
+      "month_6": 32.21,
+      "year_1": 27.72,
+      "ytd": 26.3,
+      "fee": "0.08%"
+    },
+    {
       "code": "573003",
       "name": "诺德增强收益债券",
       "daily_return": 0.52,
@@ -893,15 +905,15 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "005273",
-      "name": "华商可转债债券A",
-      "daily_return": 0.52,
-      "week_1": 0.6,
-      "month_1": -1.91,
-      "month_3": -10.26,
-      "month_6": 32.21,
-      "year_1": 27.72,
-      "ytd": 26.3,
+      "code": "161624",
+      "name": "融通可转债债券A",
+      "daily_return": 0.5,
+      "week_1": 0.03,
+      "month_1": -3.24,
+      "month_3": -2.18,
+      "month_6": -4.23,
+      "year_1": -10.15,
+      "ytd": -8.32,
       "fee": "0.08%"
     },
     {
@@ -929,18 +941,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "161624",
-      "name": "融通可转债债券A",
-      "daily_return": 0.5,
-      "week_1": 0.03,
-      "month_1": -3.24,
-      "month_3": -2.18,
-      "month_6": -4.23,
-      "year_1": -10.15,
-      "ytd": -8.32,
-      "fee": "0.08%"
-    },
-    {
       "code": "161625",
       "name": "融通可转债债券C",
       "daily_return": 0.49,
@@ -965,18 +965,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "010118",
-      "name": "天弘多元收益债券A",
-      "daily_return": 0.47,
-      "week_1": 0.41,
-      "month_1": -0.15,
-      "month_3": 3.26,
-      "month_6": 1.69,
-      "year_1": 6.79,
-      "ytd": 3.86,
-      "fee": "0.08%"
-    },
-    {
       "code": "022527",
       "name": "天弘多元收益债券E",
       "daily_return": 0.47,
@@ -987,6 +975,18 @@ const FUND_DATA_CAT1 = {
       "year_1": 6.42,
       "ytd": 3.6,
       "fee": "0.00%"
+    },
+    {
+      "code": "010118",
+      "name": "天弘多元收益债券A",
+      "daily_return": 0.47,
+      "week_1": 0.41,
+      "month_1": -0.15,
+      "month_3": 3.26,
+      "month_6": 1.69,
+      "year_1": 6.79,
+      "ytd": 3.86,
+      "fee": "0.08%"
     },
     {
       "code": "040023",
@@ -1025,18 +1025,6 @@ const FUND_DATA_CAT1 = {
       "fee": "0.00%"
     },
     {
-      "code": "004953",
-      "name": "兴全恒益债券C",
-      "daily_return": 0.4,
-      "week_1": -0.8,
-      "month_1": -3.02,
-      "month_3": -1.7,
-      "month_6": -0.88,
-      "year_1": 0.84,
-      "ytd": 0.33,
-      "fee": "0.00%"
-    },
-    {
       "code": "004952",
       "name": "兴全恒益债券A",
       "daily_return": 0.4,
@@ -1047,6 +1035,18 @@ const FUND_DATA_CAT1 = {
       "year_1": 1.24,
       "ytd": 0.62,
       "fee": "0.08%"
+    },
+    {
+      "code": "004953",
+      "name": "兴全恒益债券C",
+      "daily_return": 0.4,
+      "week_1": -0.8,
+      "month_1": -3.02,
+      "month_3": -1.7,
+      "month_6": -0.88,
+      "year_1": 0.84,
+      "ytd": 0.33,
+      "fee": "0.00%"
     },
     {
       "code": "022760",
@@ -1073,16 +1073,16 @@ const FUND_DATA_CAT1 = {
       "fee": "0.08%"
     },
     {
-      "code": "003134",
-      "name": "易方达裕鑫债券C",
+      "code": "003275",
+      "name": "国联安添利增长债A",
       "daily_return": 0.37,
-      "week_1": -0.95,
-      "month_1": -1.9,
-      "month_3": 0.17,
-      "month_6": 0.19,
-      "year_1": 0.25,
-      "ytd": 0.48,
-      "fee": "0.00%"
+      "week_1": 0.14,
+      "month_1": -0.59,
+      "month_3": 1.62,
+      "month_6": -1.8,
+      "year_1": -1.03,
+      "ytd": -0.7,
+      "fee": "0.07%"
     }
   ]
 };

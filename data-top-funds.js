@@ -1,23 +1,6 @@
 const FUND_DATA_TOP = {
   "top_funds": [
     {
-      "code": "015139",
-      "name": "泰康医疗健康股票发起A",
-      "date": "2026-09-30",
-      "nav": 0.9692,
-      "acc_nav": 0.9692,
-      "daily_return": 6.56,
-      "week_1": 1.05,
-      "month_1": 10.94,
-      "month_3": 10.53,
-      "month_6": 10.87,
-      "year_1": -8.88,
-      "ytd": 6.63,
-      "since_inception": -3.08,
-      "fee": "0.15%",
-      "type": "股票型"
-    },
-    {
       "code": "015140",
       "name": "泰康医疗健康股票发起C",
       "date": "2026-09-30",
@@ -32,6 +15,23 @@ const FUND_DATA_TOP = {
       "ytd": 6.23,
       "since_inception": -5.25,
       "fee": "0.00%",
+      "type": "股票型"
+    },
+    {
+      "code": "015139",
+      "name": "泰康医疗健康股票发起A",
+      "date": "2026-09-30",
+      "nav": 0.9692,
+      "acc_nav": 0.9692,
+      "daily_return": 6.56,
+      "week_1": 1.05,
+      "month_1": 10.94,
+      "month_3": 10.53,
+      "month_6": 10.87,
+      "year_1": -8.88,
+      "ytd": 6.63,
+      "since_inception": -3.08,
+      "fee": "0.15%",
       "type": "股票型"
     },
     {
@@ -205,23 +205,6 @@ const FUND_DATA_TOP = {
       "type": "混合型"
     },
     {
-      "code": "019784",
-      "name": "华安健康主题混合C",
-      "date": "2026-09-30",
-      "nav": 1.5271,
-      "acc_nav": 1.5271,
-      "daily_return": 5.13,
-      "week_1": 0.61,
-      "month_1": 6.84,
-      "month_3": 17.98,
-      "month_6": 17.08,
-      "year_1": -3.48,
-      "ytd": 17.49,
-      "since_inception": 52.71,
-      "fee": "0.00%",
-      "type": "混合型"
-    },
-    {
       "code": "019783",
       "name": "华安健康主题混合A",
       "date": "2026-09-30",
@@ -236,6 +219,23 @@ const FUND_DATA_TOP = {
       "ytd": 18.02,
       "since_inception": 55.13,
       "fee": "0.15%",
+      "type": "混合型"
+    },
+    {
+      "code": "019784",
+      "name": "华安健康主题混合C",
+      "date": "2026-09-30",
+      "nav": 1.5271,
+      "acc_nav": 1.5271,
+      "daily_return": 5.13,
+      "week_1": 0.61,
+      "month_1": 6.84,
+      "month_3": 17.98,
+      "month_6": 17.08,
+      "year_1": -3.48,
+      "ytd": 17.49,
+      "since_inception": 52.71,
+      "fee": "0.00%",
       "type": "混合型"
     },
     {
@@ -307,23 +307,6 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
-      "code": "013941",
-      "name": "东吴医疗服务股票C",
-      "date": "2026-09-30",
-      "nav": 0.734,
-      "acc_nav": 0.734,
-      "daily_return": 5.05,
-      "week_1": 0.69,
-      "month_1": 8.71,
-      "month_3": 16.3,
-      "month_6": 15.61,
-      "year_1": -8.48,
-      "ytd": 16.01,
-      "since_inception": -26.6,
-      "fee": "0.00%",
-      "type": "股票型"
-    },
-    {
       "code": "011948",
       "name": "东吴智慧医疗量化混合C",
       "date": "2026-09-30",
@@ -339,6 +322,23 @@ const FUND_DATA_TOP = {
       "since_inception": -33.88,
       "fee": "0.00%",
       "type": "混合型"
+    },
+    {
+      "code": "013941",
+      "name": "东吴医疗服务股票C",
+      "date": "2026-09-30",
+      "nav": 0.734,
+      "acc_nav": 0.734,
+      "daily_return": 5.05,
+      "week_1": 0.69,
+      "month_1": 8.71,
+      "month_3": 16.3,
+      "month_6": 15.61,
+      "year_1": -8.48,
+      "ytd": 16.01,
+      "since_inception": -26.6,
+      "fee": "0.00%",
+      "type": "股票型"
     },
     {
       "code": "017480",
@@ -375,23 +375,6 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
-      "code": "011374",
-      "name": "招商前沿医疗保健股票C",
-      "date": "2026-09-30",
-      "nav": 0.8979,
-      "acc_nav": 0.8979,
-      "daily_return": 4.85,
-      "week_1": 0.35,
-      "month_1": 16.6,
-      "month_3": 46.31,
-      "month_6": 56.48,
-      "year_1": 32.59,
-      "ytd": 60.86,
-      "since_inception": -10.21,
-      "fee": "0.00%",
-      "type": "股票型"
-    },
-    {
       "code": "011373",
       "name": "招商前沿医疗保健股票A",
       "date": "2026-09-30",
@@ -406,6 +389,23 @@ const FUND_DATA_TOP = {
       "ytd": 61.78,
       "since_inception": -6.38,
       "fee": "0.15%",
+      "type": "股票型"
+    },
+    {
+      "code": "011374",
+      "name": "招商前沿医疗保健股票C",
+      "date": "2026-09-30",
+      "nav": 0.8979,
+      "acc_nav": 0.8979,
+      "daily_return": 4.85,
+      "week_1": 0.35,
+      "month_1": 16.6,
+      "month_3": 46.31,
+      "month_6": 56.48,
+      "year_1": 32.59,
+      "ytd": 60.86,
+      "since_inception": -10.21,
+      "fee": "0.00%",
       "type": "股票型"
     },
     {
@@ -426,21 +426,21 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
-      "code": "005433",
-      "name": "申万菱信医药先锋股票A",
+      "code": "018364",
+      "name": "银华医疗健康混合A",
       "date": "2026-09-30",
-      "nav": 0.438,
-      "acc_nav": 0.438,
+      "nav": 0.9308,
+      "acc_nav": 0.9308,
       "daily_return": 4.73,
-      "week_1": -0.09,
-      "month_1": 15.42,
-      "month_3": 20.16,
-      "month_6": -0.75,
-      "year_1": -16.97,
-      "ytd": -1.66,
-      "since_inception": -56.2,
+      "week_1": 0.1,
+      "month_1": 9.39,
+      "month_3": 21.29,
+      "month_6": 12.48,
+      "year_1": -9.92,
+      "ytd": 13.08,
+      "since_inception": -6.92,
       "fee": "0.15%",
-      "type": "股票型"
+      "type": "混合型"
     },
     {
       "code": "017962",
@@ -460,21 +460,21 @@ const FUND_DATA_TOP = {
       "type": "混合型"
     },
     {
-      "code": "018364",
-      "name": "银华医疗健康混合A",
+      "code": "005433",
+      "name": "申万菱信医药先锋股票A",
       "date": "2026-09-30",
-      "nav": 0.9308,
-      "acc_nav": 0.9308,
+      "nav": 0.438,
+      "acc_nav": 0.438,
       "daily_return": 4.73,
-      "week_1": 0.1,
-      "month_1": 9.39,
-      "month_3": 21.29,
-      "month_6": 12.48,
-      "year_1": -9.92,
-      "ytd": 13.08,
-      "since_inception": -6.92,
+      "week_1": -0.09,
+      "month_1": 15.42,
+      "month_3": 20.16,
+      "month_6": -0.75,
+      "year_1": -16.97,
+      "ytd": -1.66,
+      "since_inception": -56.2,
       "fee": "0.15%",
-      "type": "混合型"
+      "type": "股票型"
     },
     {
       "code": "018365",
@@ -579,23 +579,6 @@ const FUND_DATA_TOP = {
       "type": "混合型"
     },
     {
-      "code": "009360",
-      "name": "招商创新增长混合A",
-      "date": "2026-09-30",
-      "nav": 1.1796,
-      "acc_nav": 1.1796,
-      "daily_return": 4.6,
-      "week_1": -0.44,
-      "month_1": 16.0,
-      "month_3": 44.58,
-      "month_6": 52.64,
-      "year_1": 27.8,
-      "ytd": 49.11,
-      "since_inception": 17.96,
-      "fee": "0.15%",
-      "type": "混合型"
-    },
-    {
       "code": "009361",
       "name": "招商创新增长混合C",
       "date": "2026-09-30",
@@ -610,6 +593,23 @@ const FUND_DATA_TOP = {
       "ytd": 48.23,
       "since_inception": 12.18,
       "fee": "0.00%",
+      "type": "混合型"
+    },
+    {
+      "code": "009360",
+      "name": "招商创新增长混合A",
+      "date": "2026-09-30",
+      "nav": 1.1796,
+      "acc_nav": 1.1796,
+      "daily_return": 4.6,
+      "week_1": -0.44,
+      "month_1": 16.0,
+      "month_3": 44.58,
+      "month_6": 52.64,
+      "year_1": 27.8,
+      "ytd": 49.11,
+      "since_inception": 17.96,
+      "fee": "0.15%",
       "type": "混合型"
     },
     {
@@ -766,23 +766,6 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
-      "code": "013072",
-      "name": "泰信医疗服务混合发起式A",
-      "date": "2026-09-30",
-      "nav": 1.1817,
-      "acc_nav": 1.1817,
-      "daily_return": 4.36,
-      "week_1": -2.76,
-      "month_1": 5.6,
-      "month_3": 7.78,
-      "month_6": 9.23,
-      "year_1": -8.16,
-      "ytd": 8.61,
-      "since_inception": 18.17,
-      "fee": "0.15%",
-      "type": "混合型"
-    },
-    {
       "code": "013073",
       "name": "泰信医疗服务混合发起式C",
       "date": "2026-09-30",
@@ -797,6 +780,23 @@ const FUND_DATA_TOP = {
       "ytd": 8.2,
       "since_inception": 15.43,
       "fee": "0.00%",
+      "type": "混合型"
+    },
+    {
+      "code": "013072",
+      "name": "泰信医疗服务混合发起式A",
+      "date": "2026-09-30",
+      "nav": 1.1817,
+      "acc_nav": 1.1817,
+      "daily_return": 4.36,
+      "week_1": -2.76,
+      "month_1": 5.6,
+      "month_3": 7.78,
+      "month_6": 9.23,
+      "year_1": -8.16,
+      "ytd": 8.61,
+      "since_inception": 18.17,
+      "fee": "0.15%",
       "type": "混合型"
     },
     {
