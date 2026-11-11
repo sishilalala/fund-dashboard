@@ -52,23 +52,6 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
-      "code": "021492",
-      "name": "中航远见领航混合发起C",
-      "date": "2026-11-10",
-      "nav": 1.4826,
-      "acc_nav": 1.5626,
-      "daily_return": 6.59,
-      "week_1": 19.77,
-      "month_1": 13.4,
-      "month_3": 9.43,
-      "month_6": 11.82,
-      "year_1": 15.97,
-      "ytd": 15.93,
-      "since_inception": 58.19,
-      "fee": "0.00%",
-      "type": "混合型"
-    },
-    {
       "code": "021491",
       "name": "中航远见领航混合发起A",
       "date": "2026-11-10",
@@ -83,6 +66,23 @@ const FUND_DATA_TOP = {
       "ytd": 16.52,
       "since_inception": 60.32,
       "fee": "0.15%",
+      "type": "混合型"
+    },
+    {
+      "code": "021492",
+      "name": "中航远见领航混合发起C",
+      "date": "2026-11-10",
+      "nav": 1.4826,
+      "acc_nav": 1.5626,
+      "daily_return": 6.59,
+      "week_1": 19.77,
+      "month_1": 13.4,
+      "month_3": 9.43,
+      "month_6": 11.82,
+      "year_1": 15.97,
+      "ytd": 15.93,
+      "since_inception": 58.19,
+      "fee": "0.00%",
       "type": "混合型"
     },
     {
@@ -120,23 +120,6 @@ const FUND_DATA_TOP = {
       "type": "混合型"
     },
     {
-      "code": "015642",
-      "name": "银华数字经济股票发起式C",
-      "date": "2026-11-10",
-      "nav": 1.4394,
-      "acc_nav": 1.4394,
-      "daily_return": 6.31,
-      "week_1": 17.43,
-      "month_1": -4.45,
-      "month_3": -13.87,
-      "month_6": -32.47,
-      "year_1": -20.55,
-      "ytd": -15.61,
-      "since_inception": 43.94,
-      "fee": "0.00%",
-      "type": "股票型"
-    },
-    {
       "code": "015641",
       "name": "银华数字经济股票发起式A",
       "date": "2026-11-10",
@@ -151,6 +134,23 @@ const FUND_DATA_TOP = {
       "ytd": -15.47,
       "since_inception": 45.33,
       "fee": "0.15%",
+      "type": "股票型"
+    },
+    {
+      "code": "015642",
+      "name": "银华数字经济股票发起式C",
+      "date": "2026-11-10",
+      "nav": 1.4394,
+      "acc_nav": 1.4394,
+      "daily_return": 6.31,
+      "week_1": 17.43,
+      "month_1": -4.45,
+      "month_3": -13.87,
+      "month_6": -32.47,
+      "year_1": -20.55,
+      "ytd": -15.61,
+      "since_inception": 43.94,
+      "fee": "0.00%",
       "type": "股票型"
     },
     {
@@ -188,23 +188,6 @@ const FUND_DATA_TOP = {
       "type": "混合型"
     },
     {
-      "code": "024455",
-      "name": "银华成长智选混合A",
-      "date": "2026-11-10",
-      "nav": 1.1041,
-      "acc_nav": 1.1041,
-      "daily_return": 5.68,
-      "week_1": 16.53,
-      "month_1": -2.44,
-      "month_3": -8.02,
-      "month_6": -22.71,
-      "year_1": 3.36,
-      "ytd": 14.19,
-      "since_inception": 10.41,
-      "fee": "0.15%",
-      "type": "混合型"
-    },
-    {
       "code": "024456",
       "name": "银华成长智选混合C",
       "date": "2026-11-10",
@@ -219,6 +202,23 @@ const FUND_DATA_TOP = {
       "ytd": 13.71,
       "since_inception": 9.65,
       "fee": "0.00%",
+      "type": "混合型"
+    },
+    {
+      "code": "024455",
+      "name": "银华成长智选混合A",
+      "date": "2026-11-10",
+      "nav": 1.1041,
+      "acc_nav": 1.1041,
+      "daily_return": 5.68,
+      "week_1": 16.53,
+      "month_1": -2.44,
+      "month_3": -8.02,
+      "month_6": -22.71,
+      "year_1": 3.36,
+      "ytd": 14.19,
+      "since_inception": 10.41,
+      "fee": "0.15%",
       "type": "混合型"
     },
     {
@@ -800,6 +800,23 @@ const FUND_DATA_TOP = {
       "type": "股票型"
     },
     {
+      "code": "020005",
+      "name": "国泰金马稳健混合A",
+      "date": "2026-11-10",
+      "nav": 0.9176,
+      "acc_nav": 6.8482,
+      "daily_return": 4.44,
+      "week_1": 13.02,
+      "month_1": -4.54,
+      "month_3": -14.66,
+      "month_6": -25.95,
+      "year_1": -12.52,
+      "ytd": -22.59,
+      "since_inception": 603.0,
+      "fee": "0.15%",
+      "type": "混合型"
+    },
+    {
       "code": "028537",
       "name": "南方新兴龙头灵活配置混合C",
       "date": "2026-11-10",
@@ -832,23 +849,6 @@ const FUND_DATA_TOP = {
       "since_inception": 56.87,
       "fee": "0.00%",
       "type": "股票型"
-    },
-    {
-      "code": "020005",
-      "name": "国泰金马稳健混合A",
-      "date": "2026-11-10",
-      "nav": 0.9176,
-      "acc_nav": 6.8482,
-      "daily_return": 4.44,
-      "week_1": 13.02,
-      "month_1": -4.54,
-      "month_3": -14.66,
-      "month_6": -25.95,
-      "year_1": -12.52,
-      "ytd": -22.59,
-      "since_inception": 603.0,
-      "fee": "0.15%",
-      "type": "混合型"
     }
   ]
 };
